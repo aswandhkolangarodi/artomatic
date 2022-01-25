@@ -1,0 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+*{
+    font-family: montserrat;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.profile-content-main{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    border-top:none ;
+
+}
+.team-name{
+   color: #111;
+   font-size: 4rem;
+   font-weight: 700;
+   letter-spacing: 8px;
+   margin-bottom: 1rem;
+}
+.team-slogan{
+   color: #777;
+   font-size: 1rem;
+}
+.pro-image{
+   
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.prf-img{
+    width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+.loc{
+    font-weight: bolder;
+    font-size: 17px;
+    color: rgba(60, 113, 192, 0.705);
+}
+.cat{
+    font-size: smaller;
+}
+.see-prize-btn{
+    display: inline-block;
+    padding: .7rem 2.5rem;
+    background: #56ca20;
+    font-size: .8rem;
+    text-decoration: none;
+    color: #111;
+    font-size: 22px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    
+}
+.see-prize-btn:hover{
+    opacity: 0.8;
+    background: #fff;
+    border-color: #56ca20;
+    color: #56ca20;
+}
+.body{
+    /* background-image: url(../img/bgprofile.jpg); */
+    background-position: 0 1000px;
+    font-family: 'Roboto',sans-serif;
+    
+}
+/* gallery */
+.images-video a{
+    border: 1px solid;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.gallery-card{
+    display: flex; 
+    flex-direction: row;
+    margin-top: 10px;
+}
+.gallery-card img{
+    height: 250px;
+    width: 300px;
+    border-radius: 5px;
+    margin: auto;
+}
+.gallery{
+    box-shadow: 0 3px 15px rgb(0 0 0 / 50%);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+/* new gallery */
+/* .lightbox-gallery {
+    background-image: linear-gradient(#4A148C, #E53935);
+    background-repeat: no-repeat;
+    overflow-x: hidden
+}
+
+.lightbox-gallery p {
+    color: #fff
+}
+
+.lightbox-gallery h2 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-top: 40px;
+    color: #fff
+}
+
+@media (max-width:767px) {
+    .lightbox-gallery h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px
+    }
+}
+
+.lightbox-gallery .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 40px
+}
+
+.lightbox-gallery .intro p {
+    margin-bottom: 0
+}
+
+.lightbox-gallery .photos {
+    padding-bottom: 20px
+}
+
+.lightbox-gallery .item {
+    padding-bottom: 30px
+}
+.photos a{
+    height: 250px;
+    width: 300px;
+    border-radius: 5px;
+    margin: auto;
+} */
+
+
+
+

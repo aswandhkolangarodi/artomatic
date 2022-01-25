@@ -1,0 +1,337 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<style>
+    .sm-text {
+        font-size: 10px;
+        letter-spacing: 1px
+    }
+
+    .sm-text-1 {
+        font-size: 14px
+    }
+
+    .green-tab {
+        background-color: #00C853;
+        color: #fff;
+        border-radius: 5px;
+        padding: 5px 3px 5px 3px
+    }
+
+    .btn-red {
+        background-color: #E64A19;
+        color: #fff;
+        border-radius: 20px;
+        border: none;
+        outline: none
+    }
+
+    .btn-red:hover {
+        background-color: #BF360C
+    }
+
+    .btn-red:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        outline-width: 0
+    }
+
+    .round-icon {
+        font-size: 40px;
+        padding-bottom: 10px
+    }
+
+    .fa-circle {
+        font-size: 10px;
+        color: #EEEEEF
+    }
+
+    .green-dot {
+        color: #4CAF50
+    }
+
+    .red-dot {
+        color: #E64A19
+    }
+
+    .yellow-dot {
+        color: #FFD54F
+    }
+
+    .grey-text {
+        color: #BDBDBD
+    }
+
+    .green-text {
+        color: #4CAF50
+    }
+
+    .block {
+        border-right: 1px solid #F5EEEE;
+        border-top: 1px solid #F5EEEE;
+        border-bottom: 1px solid #F5EEEE;
+    }
+
+    .profile-pic img {
+        border-radius: 50%
+    }
+
+    .rating-dot {
+        letter-spacing: 5px
+    }
+</style>
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script> -->
+<link rel="stylesheet" href="{% static 'css/art_profile.css' %}">
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<div class="body">
+    <div class="container">
+        <br>
+        <div class="profile-content-main container-fluid">
+            <h3 class="team-name">ALPATVA</h3>
+            <p class="team-slogan">ALPATVA The Band
+                Putting their heart where their will is, this band has got an excellent hand in superb onstage
+                coordination and knows how to present a power packed show!</p>
+            <div class="pro-image">
+                <img class="prf-img" src="{% static 'img/category/band.jpg' %}" alt="John">
+            </div>
+            <h4 class="loc">New Delhi,Delhi</h4>
+            <p class="cat">LIVE BAND(Bollywood,Folk,Sufi)</p>
+            <marquee behavior="alternate" style="background-color:white;">
+                <p style="color:red;"><b>Available for virtual events</b></p>
+            </marquee>
+            <a href="#" class="btn see-prize-btn">See price and book</a>
+            <hr style="box-shadow: 0 3px 15px rgb(0 0 0 / 50%);height: 1px;background: rgb(0 0 0 / 30%);">
+        </div>
+        <div class="images-video">
+            <a href="#gallery" class="btn" style="color: #be63f9;" id="gallerybtn"><i class="fas fa-images"></i>
+                Gallery</a>
+            <a href="#video" class="btn" style="color: #26c6da;" id="videobtn"><i class="fab fa-youtube"></i> videos</a>
+        </div>
+        <div class="tab-content">
+            <div class="gallery container " id="gallery">
+                <!-- <div class="gallery-card ">
+            <img src="{% static 'img/category/band.jpg' %}" alt="">
+            <img src="{% static 'img/category/dance.jpg' %}" alt="">
+            <img src="{% static 'img/category/dj.jpg' %}" alt="">
+        </div>
+        <div class="gallery-card ">
+            <img src="{% static 'img/guitarbg.jpg' %}" alt="">
+            <img src="{% static 'img/bgprofile.jpg' %}" alt="">
+            <img src="{% static 'img/bg11.jpg' %}" alt="">
+        </div> -->
+                <div class="lightbox-gallery">
+                    <div class="container">
+                        <div class="row photos">
+                            <div class="col-sm-6 col-md-4 col-lg-3 item">
+                                <a href="{% static 'img/category/band.jpg' %}" data-lightbox="photos">
+                                    <img class="img-fluid" src="{% static 'img/category/band.jpg' %}">
+                                </a>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3 item">
+                                <a href="{% static 'img/category/band.jpg' %}" data-lightbox="photos">
+                                    <img class="img-fluid" src="{% static 'img/category/dj.jpg' %}">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery container " id="video" style="display: none;">
+                <div class="gallery-card ">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/MHj9XlV3fFg"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tsvPU2Ab14k"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--  -->
+<!-- <div class="container" style="background-color: black;"> -->
+    
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card" style="width: 12rem; height: 12rem; background:  #fff1c0;;">
+                <h4>0</h4>
+                <h5 >Performence</h5>
+            
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card" style="width: 12rem; height: 12rem; background:  #f5e6fe;;;">
+                <h4 >10</h4>
+                <h5 >Performing Members</h5>
+            
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card" style="width: 12rem; height: 12rem; background:  #f5e6fe;;;">
+                <h4 >10</h4>
+                <h5 >Performing Members</h5>
+            
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <div class="card" style="width: 12rem; height: 12rem; background:  #ffe6e2;;">
+                <h4 >Can Travel</h4>
+                <h5 >Performing Duration</h5>
+            
+            </div>
+        </div>
+    <!-- </div> -->
+</div>
+<!--  -->
+
+
+
+
+
+
+
+<!-- <div class="profile-content-main container-fluid">
+
+
+    <h3 style="margin-top: 30px;">Performens Details</h3> <br>
+    <div class="container gallery" style="display: grid; grid-template-columns: auto auto auto auto;">
+        <div class="card" style="width: 12rem; height: 12rem; background:  #fff1c0;;">
+            <h4 style="margin-top: 5rem; color: #f8c409;">0</h4>
+            <h5 style="margin-top: 8px; color: #f8c409;">Performence</h5>
+
+        </div>
+        <div class="card" style="width: 12rem; height: 12rem; background:  #f5e6fe;;;">
+            <h4 style="margin-top: 5rem; color: #a511fa;;">10</h4>
+            <h5 style="margin-top: 8px; color: #a511fa;">Performing Members</h5>
+
+        </div>
+        <div class="card" style="width: 12rem; height: 12rem; background:  #e3f8fa;;">
+            <h4 style="margin-top: 5rem; color: #31e0f0;">90 - 120 Min</h4>
+            <h5 style="margin-top: 8px; color: #31e0f0;">Performing Duration</h5>
+
+        </div>
+        <div class="card" style="width: 12rem; height: 12rem; background:  #ffe6e2;;">
+            <h4 style="margin-top: 5rem; color: #f18675;">Can Travel</h4>
+            <h5 style="margin-top: 8px; color: #f18675;">Performing Duration</h5>
+
+        </div>
+
+
+
+    </div>
+</div> -->
+<!-- <hr style="box-shadow: 0 3px 15px rgb(0 0 0 / 50%);height: 1px;background: rgb(0 0 0 / 30%);"> -->
+
+
+<!-- rating section -->
+
+
+<div class="container-fluid px-0 py-5 mx-auto">
+    <div class="row justify-content-center mx-0 mx-md-auto">
+        <div class="col-lg-10 col-md-11 px-1 px-sm-2">
+            <div class="card border-0 px-3">
+                <!-- top row -->
+                <div class="d-flex row py-5 px-5 bg-light">
+                    <div class="green-tab p-2 px-3 mx-2">
+                        <p class="sm-text mb-0">OVERALL RATING</p>
+                        <h4>4.8</h4>
+                    </div>
+                    <div class="white-tab p-2 mx-2 text-muted">
+                        <p class="sm-text mb-0">ALL REVIEWS</p>
+                        <h4>124</h4>
+                    </div>
+                    <div class="white-tab p-2 mx-2">
+                        <p class="sm-text mb-0 text-muted">POSITIVE REVIEWS</p>
+                        <h4 class="green-text">93%</h4>
+                    </div>
+                    <div class="ml-md-auto p-2 mx-md-2 pt-4 pt-md-3"> <button class="btn btn-red px-4">WRITE A
+                            REVIEW</button> </div>
+                </div>
+
+                <div class="review p-5">
+                    <div class="row d-flex">
+                        <div class="profile-pic"><img src="https://i.imgur.com/Mcd6HIg.jpg" width="60px" height="60px">
+                        </div>
+                        <div class="d-flex flex-column pl-3">
+                            <h4>Emily</h4>
+                            <p class="grey-text">30 min ago</p>
+                        </div>
+                    </div>
+                    <div class="row pb-3">
+                        <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                        <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                        <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                        <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                        <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                        <div class="green-text">
+                            <h5 class="mb-0 pl-3">Excellent</h5>
+                        </div>
+                    </div>
+                    <div class="row pb-3">
+                        <p>This dive center is incredibly well organized and is at the top of its game.</p>
+                    </div>
+
+
+                </div>
+                <div class="review p-5" style="display: none;" id="readmore">
+                    <div class="row d-flex">
+                        <div class="profile-pic"><img src="https://i.imgur.com/Mcd6HIg.jpg" width="60px" height="60px">
+                        </div>
+                        <div class="d-flex flex-column pl-3">
+                            <h4>Emily</h4>
+                            <p class="grey-text">30 min ago</p>
+                        </div>
+                    </div>
+                    <div class="row pb-3">
+                        <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                        <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                        <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                        <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                        <div class="fa fa-circle green-dot my-auto rating-dot"></div>
+                        <div class="green-text">
+                            <h5 class="mb-0 pl-3">Excellent</h5>
+                        </div>
+                    </div>
+                    <div class="row pb-3">
+                        <p>This dive center is incredibly well organized and is at the top of its game.</p>
+                    </div>
+
+
+                </div>
+
+                <a href="#readmore" id="readmorebtn">read more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('#gallerybtn').click(function () {
+        $('#video').hide()
+        $('#gallery').show()
+    })
+    $('#videobtn').click(function () {
+        $('#gallery').hide()
+        $('#video').show()
+    })
+    $('#readmorebtn').click(function () {
+        $('#readmore').toggle()
+    })
+</script>
+
+
+<br><br>
+{% endblock %}

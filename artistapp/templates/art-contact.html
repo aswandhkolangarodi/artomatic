@@ -1,0 +1,97 @@
+{% extends 'art-dash-master.html' %}
+{% load static %}
+{% block content %}
+
+
+<style>
+    .contact{
+        width: 500px;
+        padding: 30px;
+        border-radius: 10px;
+        margin-left: 5px;
+        border: none;
+    }
+    .contact input{
+        width: 85%;
+        border: none;
+        border-bottom: 1px solid rgb(11, 219, 29);
+        margin: 10px;
+        border-radius: 10px;
+        height: 50px;
+       
+    }
+    .contact a{
+        position: absolute;
+        margin: 18px;  
+        margin-top: 30px;
+    }
+</style>
+
+<div class="container">
+<div class="card contact">
+    <h2 class="card-title">Contact Details</h2>
+    <hr>
+    <h4>Primary contact info</h4>
+    <form action="">
+        <input type="text" value="aswandh k" disabled >  
+        <input type="email" value="aswandhk2000@gmail.com" disabled> <a href="#" data-toggle="modal" data-target="#email-modal" class="btn"><i class="fas fa-edit"></i></a>
+        <input type="text" value="9207588472" disabled> <a href="#" data-toggle="modal" data-target="#phone-modal" class="btn"><i class="fas fa-edit"></i></a>
+
+    </form>
+
+    
+  
+  
+  <!-- Modal  email-->
+  <div class="modal fade" id="email-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change Email</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <label for="">Enter email</label>
+        <input type="email" placeholder="aswandhk2000@gmail.com">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+ 
+  
+  <!-- Modal phone-->
+  <div class="modal fade" id="phone-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <label for="">Enter Phone Number</label>
+          <input type="text" placeholder="9207588472">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,315 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <title>artomatic-home</title>
+    <style>
+        .red-rounded-btn {
+          text-decoration: none;
+    background-color: #ff214f;
+    padding: 6px 15px;
+    border-top-right-radius: 0;
+    border: 2px solid #ff214f;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    letter-spacing: normal;
+    font-weight: 600!important;
+    text-transform: none;
+        }
+        
+       .red-rounded-btn:hover{
+         background-color: #fff;
+         text-decoration: none;
+         
+
+       }
+       
+        /* searchbar */
+       
+        .trigger_search{
+          background: #771f44;
+          border: 0;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          outline: 0;
+          cursor: pointer;
+          color: #fff;
+        }
+        .trigger_search:hover{
+          background-color: #461529;
+        }
+        .input{
+          border-radius: 20px;
+        }
+
+
+        /* navbar dropdown */
+
+        
+        .nav-item .nav-link:hover{
+          color: #fff;
+          background-color: #000;
+          border-radius: 10px;
+          transform: scale(0.9);
+        }
+        .dropdown-menu a:hover{
+          background-color: #000;
+          color: #fff;
+        }
+        .dropdown-menu{
+          border-radius: 10px;
+          background-color: rgb(241, 233, 233);
+        }
+       
+        
+  
+    </style>
+</head>
+
+<body >
+    <div class="row">
+        <div class="col-lg-12" >
+            <!-- Image and text -->
+            <nav class="navbar  navbar-light navbar-expand-lg navbar-dark " style="background: #2c3e50; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;" >
+                <a class="navbar-brand" href="/user/home/" style="margin-left: 50px; font-family: cursive; font-size: 28px  ">ARTOMATIC </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                
+     
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                      <form class="form-inline ml-auto">
+                        <input class="form-control mr-sm-2 input" type="search" placeholder="Search Here" aria-label="Search">
+                        <button type="button" class="trigger_search"><i class="fas fa-search"></i></button>
+                      </form>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false" style="color: white;">
+                          <i class="bi bi-bookmark-plus"></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                            <path d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4z"/>
+                          </svg>
+                              category
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/user/browse-cat/">Band</a>
+                          <a class="dropdown-item" href="#">Dj</a>
+                          <a class="dropdown-item" href="#">Dance/Troup</a>
+                          <a class="dropdown-item" href="#">Magician</a>
+                          <a class="dropdown-item" href="#">Photo/Videography</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false" style="color: white;">
+                          <i class="bi bi-box-arrow-in-right"></i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+                            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                          </svg>
+                              For Artist
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="/user/login-artist/">Login</a>
+                          
+                          <a class="dropdown-item" href="#">Membership</a>
+
+                        </div>
+                      </li>
+                      
+                     
+                    </ul>
+                   
+                      
+                        
+                        <a class=" nav-item  red-rounded-btn " href="/user/category/">
+                      <span class=" text-secondary" style="color: #fff;"> Post Your Requirement</span>
+                        </a>
+                    
+                   
+                   
+                    
+                   
+                </div>
+                
+
+
+            </nav>
+
+        </div>
+        
+    </div>
+    
+
+
+ <!-- end nav bar -->
+
+
+
+
+  {% block content %}
+  {% endblock %}
+
+
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f m-3"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter m-3"></i>
+      </a>
+      
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram m-3"></i>
+      </a>
+      
+    
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            For BUYERS
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Our Buyers</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Browse</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Post Your Requirement</a>
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            for artist
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Login</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Artist signup</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Artist Membership</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Jobs</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+         <!-- Grid column -->
+         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            About us
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">about</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Quick contact</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">carrier</a>
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © Copyright 2015- 2021 | VINSM Globe Pvt. Ltd. | All Rights Reserved.
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+  
+  
+ 
+
+   <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+   
+  </body>
+</html>

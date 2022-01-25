@@ -1,0 +1,283 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<!-- owl carosel -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+<style>
+  
+
+  .carousel-item.first {
+    background-image: url('{% static "img/bg11.jpg"%}');
+
+}
+
+.carousel-item.second {
+    background-image: url('{% static "img/bg2.jpg"%}');
+
+}
+
+.carousel-item.third {
+    background-image: url('{% static "img/bg3.jpg"%}');
+
+}
+ 
+</style>
+<link rel="stylesheet" href="{% static 'css/u_home.css'%}">
+<div class="container-fluid p-0">
+    <div id="carouselExampleIndicators" class="carousel slide hero-sliders" data-ride="carousel">
+        <ol class="carousel-indicators imagecarousel">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner inner" role="listbox">
+            <div class="carousel-item active first">
+                <div class="container h-100 d-md-block">
+                    <div class="row align-items-center h-100">
+                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                            <div class="caption animate__animated animate__fadeIn">
+                                <h2 class="animate__animated animate__fadeInLeft" style="color: rgb(251, 255, 8); ">WELCOME TO ARTOMATIC</h2>
+                                <p class="animate__animated animate__fadeInRight">Creating exceptional experience, at all times since 2022. <br>Join India's largest Artist Booking and Discovery Platform, and brace your online presence</p>
+                                <a class="animate__animated animate__bounceInUp btn delicious-btn" href="/user/user-login/" >Login</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item  second">
+                <div class="container h-100 d-md-block">
+                    <div class="row align-items-center h-100">
+                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                            <div class="caption animate__animated animate__fadeIn">
+                                <h2 class="animate__animated animate__fadeInLeft" style="color: rgb(251, 255, 8); ">Are you an artist?</h2>
+                                <p class="animate__animated animate__fadeInRight">
+                                    TAKE YOUR CREATIVE CAREER UP A NOTCH WITH ARTOMATIC</p>
+                                <a class="animate__animated animate__bounceInUp btn delicious-btn" href="/user/login-artist/">Login</a>
+                                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item  third">
+                <div class="container h-100 d-md-block">
+                    <div class="row align-items-center h-100">
+                        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                            <div class="caption animate__animated animate__fadeIn">
+                                <h2 class="animate__animated animate__fadeInLeft" style="color: rgb(251, 255, 8); font-size: 25px; ">Happy Clients Equals To Happy Us </h2>
+                                <p class="animate__animated animate__fadeInRight"> We always thrive for the best and our clients feedback is what motivates us
+                                    to achieve that extra mile.</p>
+                                <a class="animate__animated animate__bounceInUp btn delicious-btn" href="#">learn
+                                    more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </button>
+    </div>
+</div>
+  
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="jumbotron jumbotron-fluid category">
+            <div class="container " >
+              <h1 class="display-5 heading">BOOK ARTIST</h1>
+              <p class="lead">Happy Clients Equals Happy Us</p>
+              <p class="category-para" >We always thrive for the best and our clients feedback is what motivates us to achieve that extra mile</p>
+            </div>
+            <div class="category-btn">
+                <a href="#" class="btn active"><i class="fas fa-drum"></i> BAND</a>
+                <a href="#" class="btn"><i class="fas fa-compact-disc"></i> DJ</a>
+                <a href="#"class="btn"><i class="fas fa-american-sign-language-interpreting"></i> DANCE</a>
+                <a href="#"class="btn"><i class="fal fa-magic"></i> MAGICIAN</a>
+                <a href="#"class="btn"><i class="fas fa-camera-retro"></i> PHOTOGRAPY</a>
+                </div>
+          </div>
+          
+    </div>
+</div>
+
+        <div class="container-fluid slider slider-cat " >
+        <div class="card">
+            <div class="img-cat">
+                <img src="{% static 'img/category/band1.webp' %}" alt="">
+            </div>
+            <div class="content-cat">
+                <div class="title">Annhad The Band</div>
+                <p>Putting their heart where their will is, this band has got an excellent hand in superb ons...
+
+                </p>
+                <div class="btn btn-cat">
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-cat">
+                <img src="{% static 'img/category/band2.webp' %}" alt="">
+            </div>
+            <div class="content-cat">
+                <div class="title">Mazhab The Band</div>
+                <p>Every song is a combination of soulful and rock genre which makes us Delhi/NCR first Soulf...
+
+                </p>
+                <div class="btn btn-cat">
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-cat">
+                <img src="{% static 'img/category/band3.webp' %}" alt="">
+            </div>
+            <div class="content-cat">
+                <div class="title">Jaaniya The Band</div>
+                <p>
+                    A multi-genre band that engages actively with audiences !</p>
+                
+                <div class="btn btn-cat">
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-cat">
+                <img src="{% static 'img/category/band1.webp' %}" alt="">
+            </div>
+            <div class="content-cat">
+                <div class="title">Fusion Addiction</div>
+                <p>    
+                    Fusion Addiction is a fusion Indian rock band playing Sufi, Bollywood and Punjabi folk wit...</p>
+                <div class="btn btn-cat">
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  <!-- <div style="padding: 50px;">
+    <div class="owl-carousel owl-theme">
+        <div class="item"><div class="card">
+            <div class="img-cat">
+                <img src="{% static 'img/category/band1.webp' %}"  alt="">
+            </div>
+            <div class="content-cat">
+                <div class="title">Annhad The Band</div>
+                <p>Putting their heart where their will is, this band has got an excellent hand in superb ons...
+
+                </p>
+                <div class="btn btn-cat">
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div></div>
+        <div class="item"><div class="card">
+            <div class="img-cat">
+                <img src="{% static 'img/category/band1.webp' %}" alt="">
+            </div>
+            <div class="content-cat">
+                <div class="title">Annhad The Band</div>
+                <p>Putting their heart where their will is, this band has got an excellent hand in superb ons...
+
+                </p>
+                <div class="btn btn-cat">
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div></div>
+        <div class="item"><div class="card">
+            <div class="img-cat">
+                <img src="{% static 'img/category/band1.webp' %}" alt="">
+            </div>
+            <div class="content-cat">
+                <div class="title">Annhad The Band</div>
+                <p>Putting their heart where their will is, this band has got an excellent hand in superb ons...
+
+                </p>
+                <div class="btn btn-cat">
+                    <button>Book Now</button>
+                </div>
+            </div>
+        </div></div>
+        
+    </div>
+    
+</div> -->
+
+
+
+
+<!-- about -->
+<section>
+    <div class="about-us">
+        <h1>about us</h1>
+        <div class="wrapper">
+            <div class="content">
+                <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora necessitatibus delectus doloremque perferendis aliquam cupiditate officiis omnis sed tenetur quod deleniti blanditiis laudantium qui totam sapiente velit maiores, in ex?</p>
+                <div class="button">
+                    <a href="#">read more</a>
+                </div>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="{% static 'img/about.jpg' %}" alt="">
+            </div>
+        </div>
+
+    </div>
+</section> 
+<!-- about end -->
+
+
+
+
+
+
+  <!-- <script>
+      $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+  </script> -->
+  
+
+
+
+{% endblock %}

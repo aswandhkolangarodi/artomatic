@@ -1,0 +1,265 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+
+    <style>
+        .container-body {
+            font-family: "Lato", sans-serif;
+            background-color: #fff;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to bottom, #ffffff, #ccffff);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #334680;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #000;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        /* card profile */
+        .profilecard {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+            background: linear-gradient(to bottom, #ffffff, #ccffff);
+            box-shadow: 0 3px 15px rgb(0 0 0 / 50%);
+            margin-left: 30px;
+            margin-right: 30px;
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+
+
+
+        .bookbtn {
+            border: 1px solid;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000 ;
+            text-align: center;
+            cursor: pointer;
+            width: 90%;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+      
+
+       .bookbtn:hover{
+           color: #000;
+           background-color: white;
+       }
+       .sidenav a:hover {
+            background: white;
+            color: black;
+        }
+
+        .imgprofile:hover {
+            transition: transform .8s ease;
+            transform: scale(.89);
+
+        }
+        .specs{
+            margin-top: -28px;
+        }
+        .specs i {
+            color: #000;
+        }
+
+        .specs p {
+            font-size: 17px;
+            margin-top: 20px;
+        }
+        .plus{
+            float: right;
+            margin-top: 8px;
+        }
+        .discription{
+            font-size: 12px;
+            color: rgba(79, 79, 100, 0.76);
+        }
+        .card-title{
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+        .rating{
+            margin-top: -6px;
+        }
+        .rating i{
+            color: #ffc107;
+        }
+       
+    </style>
+</head>
+
+<body>
+    
+    
+<div class="container-fluid container-body ">
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="mySidenav" class="fixed-top sidenav">
+
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">Refine by gender <i class="fas fa-plus plus"></i></a>
+                <a href="#">Refine by Genre<i class="fas fa-plus plus"></i></a>
+                <a href="#">Refined by Language<i class="fas fa-plus plus"></i></a>
+                <a href="#">Refined by Event<i class="fas fa-plus plus"></i></a>
+                <a href="#">Refined by City<i class="fas fa-plus plus"></i></a>
+
+            </div>
+            <span style="font-size:30px;cursor:pointer;color: #000;" onclick="openNav()">&#9776; Filters</span>
+        </div>
+
+        <div id="main">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="tablecards container-fluid" style=" display: flex; flex-direction: row;padding-left: 100px;">
+                        <div class="card profilecard container-fluid">
+                            <a href="/user/artist-profile" class="imgprofile"><img class=" profileimg" src="{% static 'img/category/band.jpg' %}" alt="John"
+                                    style="width:100%"></a>
+                            <h3 class="card-title">Alpatva</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas  fa-star"></i>
+                                <i class="fas  fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fal fa-star"></i>
+                            </div>
+                            <p class="discription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus natus aliquid provident quas harum maio</p>
+                                <div class="specs">
+                                    <p class="icons"> <i class="far fa-clock">&nbsp;&nbsp;&nbsp;90-120 min</i> </p>
+                                    <p> <i class="fal fa-language">&nbsp;&nbsp;&nbsp;english,hindi</i></p>
+                                    <p> <i class="fal fa-paper-plane">&nbsp;&nbsp;&nbsp;NationWide</i></p>
+                                    <p> <i class="fal fa-map-marker-alt">&nbsp;&nbsp;&nbsp;New Delhi</i></p>
+
+
+
+                                </div>
+
+                               
+                                <p><button class="bookbtn">book now</button></p>
+                        </div>
+                        <div class="card profilecard container-fluid">
+                            <a href="" class="imgprofile"><img class="profileimg" src="{% static 'img/category/band.jpg' %}" alt="John"
+                                    style="width:100%"></a>
+                            <h3 class="card-title">Alpatva</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas  fa-star"></i>
+                                <i class="fas  fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fal fa-star"></i>
+                            </div>
+                            <p class="discription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus natus aliquid provident quas harum maio</p>
+                                <div class="specs">
+                                    <p class="icons"> <i class="far fa-clock">&nbsp;&nbsp;&nbsp;90-120 min</i> </p>
+                                    <p> <i class="fal fa-language">&nbsp;&nbsp;&nbsp;english,hindi</i></p>
+                                    <p> <i class="fal fa-paper-plane">&nbsp;&nbsp;&nbsp;NationWide</i></p>
+                                    <p> <i class="fal fa-map-marker-alt">&nbsp;&nbsp;&nbsp;New Delhi</i></p>
+
+
+
+                                </div>
+
+                               
+                                <p><button class="bookbtn">book now</button></p>
+                        </div>
+                        <div class="card profilecard container-fluid">
+                            <a href="" class="imgprofile"><img class="profileimg" src="{% static 'img/category/band.jpg' %}" alt="John"
+                                    style="width:100%"></a>
+                            <h3 class="card-title">Alpatva</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas  fa-star"></i>
+                                <i class="fas  fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fal fa-star"></i>
+                            </div>
+                            <p class="discription">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus natus aliquid provident quas harum maio</p>
+                                <div class="specs">
+                                    <p class="icons"> <i class="far fa-clock">&nbsp;&nbsp;&nbsp;90-120 min</i> </p>
+                                    <p> <i class="fal fa-language">&nbsp;&nbsp;&nbsp;english,hindi</i></p>
+                                    <p> <i class="fal fa-paper-plane">&nbsp;&nbsp;&nbsp;NationWide</i></p>
+                                    <p> <i class="fal fa-map-marker-alt">&nbsp;&nbsp;&nbsp;New Delhi</i></p>
+
+
+
+                                </div>
+
+                               
+                                <p><button class="bookbtn">book now</button></p>
+                        </div>
+                        
+                       
+                       
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+       
+    </script>
+
+{% endblock %}

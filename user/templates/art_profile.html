@@ -83,63 +83,75 @@
 
     .rating-dot {
         letter-spacing: 5px
+
+
+
+    }
+    
+    .profile-bottem .card h2{
+        font-size: 20px;
+    }
+    .profile-bottem .card h4{
+        font-size: 15px;
+    }
+    .lightGallery img{
+        height: 200px;
     }
 </style>
-
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <link rel="stylesheet" href="{% static 'css/art_profile.css' %}">
 
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 <div class="body">
     <div class="container">
-        <br>
-        <div class="profile-content-main container-fluid">
-            <h3 class="team-name">ALPATVA</h3>
-            <p class="team-slogan">ALPATVA The Band
-                Putting their heart where their will is, this band has got an excellent hand in superb onstage
-                coordination and knows how to present a power packed show!</p>
-            <div class="pro-image">
-                <img class="prf-img" src="{% static 'img/category/band.jpg' %}" alt="John">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="profile-content-main container-fluid">
+                    <h3 class="team-name">ALPATVA</h3>
+                    <p class="team-slogan">ALPATVA The Band
+                        Putting their heart where their will is, this band has got an excellent hand in superb onstage
+                        coordination and knows how to present a power packed show!</p>
+                    <div class="pro-image">
+                        <img class="prf-img" src="{% static 'img/category/band.jpg' %}" alt="John">
+                    </div>
+                    <h4 class="loc">New Delhi,Delhi</h4>
+                    <p class="cat">LIVE BAND(Bollywood,Folk,Sufi)</p>
+                    <marquee behavior="alternate" style="background-color:white;">
+                        <p style="color:red;"><b>Available for virtual events</b></p>
+                    </marquee>
+                    <a href="#" class="btn see-prize-btn">See price and book</a>
+                    <hr style="box-shadow: 0 3px 15px rgb(0 0 0 / 50%);height: 1px;background: rgb(0 0 0 / 30%);">
+                </div>
             </div>
-            <h4 class="loc">New Delhi,Delhi</h4>
-            <p class="cat">LIVE BAND(Bollywood,Folk,Sufi)</p>
-            <marquee behavior="alternate" style="background-color:white;">
-                <p style="color:red;"><b>Available for virtual events</b></p>
-            </marquee>
-            <a href="#" class="btn see-prize-btn">See price and book</a>
-            <hr style="box-shadow: 0 3px 15px rgb(0 0 0 / 50%);height: 1px;background: rgb(0 0 0 / 30%);">
         </div>
+        <br>
+        
         <div class="images-video">
             <a href="#gallery" class="btn" style="color: #be63f9;" id="gallerybtn"><i class="fas fa-images"></i>
                 Gallery</a>
             <a href="#video" class="btn" style="color: #26c6da;" id="videobtn"><i class="fab fa-youtube"></i> videos</a>
         </div>
-        <div class="tab-content">
+        <!-- <div class="tab-content">
             <div class="gallery container " id="gallery">
-                <!-- <div class="gallery-card ">
-            <img src="{% static 'img/category/band.jpg' %}" alt="">
-            <img src="{% static 'img/category/dance.jpg' %}" alt="">
-            <img src="{% static 'img/category/dj.jpg' %}" alt="">
-        </div>
-        <div class="gallery-card ">
-            <img src="{% static 'img/guitarbg.jpg' %}" alt="">
-            <img src="{% static 'img/bgprofile.jpg' %}" alt="">
-            <img src="{% static 'img/bg11.jpg' %}" alt="">
-        </div> -->
                 <div class="lightbox-gallery">
                     <div class="container">
                         <div class="row photos">
-                            <div class="col-sm-6 col-md-4 col-lg-3 item">
-                                <a href="{% static 'img/category/band.jpg' %}" data-lightbox="photos">
+                            <div class="col-sm-6 col-md-4 col-lg-3 align-items-center item">
                                     <img class="img-fluid" src="{% static 'img/category/band.jpg' %}">
-                                </a>
                             </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3 item">
+                            <div class="col-sm-6 col-md-4 align-items-centercol-lg-3 item">
+                                    <img class="img-fluid p-5" src="{% static 'img/category/dj.jpg' %}">
+                            </div>
+                            <div class="col-sm-6 col-md-4 align-items-centercol-lg-3 item">
+                                    <img class="img-fluid p-5" src="{% static 'img/category/dj.jpg' %}">
+                            </div>
+                            <div class="col-sm-6 col-md-4 align-items-centercol-lg-3 item">
                                 <a href="{% static 'img/category/band.jpg' %}" data-lightbox="photos">
-                                    <img class="img-fluid" src="{% static 'img/category/dj.jpg' %}">
+                                    <img class="img-fluid p-5" src="{% static 'img/category/dj.jpg' %}">
                                 </a>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -157,84 +169,76 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
     </div>
 
 </div>
+<section class="gallery-video">
+    <div class="container">
+        <div class="page-content page-container" id="page-content">
+            <div class="padding">
+                <div class="row container d-flex justify-content-center">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body justify-content-center">
+                                <div id="lightgallery" class="row item lightGallery">
+                                 <a href="{% static 'img/category/band.jpg' %}" class="fancybox" data-fancybox="gallery1"><img src="{% static 'img/category/band.jpg' %}" class="p-1" alt="image small"></a>
+                                 <a href="{% static 'img/category/band2.jpg' %}" class="fancybox" data-fancybox="gallery1"><img src="{% static 'img/category/band2.jpg' %}" class="p-1" alt="image small"></a>
+                                 <a href="{% static 'img/category/band3.jpg' %}" class="fancybox" data-fancybox="gallery1"><img src="{% static 'img/category/band3.jpg' %}" class="p-1" alt="image small"></a>
+                                 <a href="{% static 'img/category/band4.jpg' %}" class="fancybox" data-fancybox="gallery1"><img src="{% static 'img/category/band4.jpg' %}" class="p-1" alt="image small"></a>
+                                 <a href="{% static 'img/category/band5.jpg' %}" class="fancybox" data-fancybox="gallery1"><img src="{% static 'img/category/band5.jpg' %}" class="p-1" alt="image small"></a>
 
-<!--  -->
-<!-- <div class="container" style="background-color: black;"> -->
-    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="profile-bottem text-center pt-4 ">
+<div class="container">
     <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-            <div class="card" style="width: 12rem; height: 12rem; background:  #fff1c0;;">
-                <h4>0</h4>
-                <h5 >Performence</h5>
-            
+        <div class="col-lg-12">
+            <h2 class="font-weight-bold mt-5">Performence Details</h2>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card  mt-5 p-5" style="background:  #fff1c0;">
+                <h2 class="text-dark font-weight-bold">12</h2>
+                <h4 class="text-dark mt-2">Performence</h4>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-            <div class="card" style="width: 12rem; height: 12rem; background:  #f5e6fe;;;">
-                <h4 >10</h4>
-                <h5 >Performing Members</h5>
-            
+        <div class="col-lg-3 col-md-6">
+            <div class="card  mt-5 p-5" style=" background:  #f5e6fe;">
+                <h2 class="text-dark font-weight-bold">10</h2>
+                <h4 class="text-dark mt-2">Performing Members</h4>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-            <div class="card" style="width: 12rem; height: 12rem; background:  #f5e6fe;;;">
-                <h4 >10</h4>
-                <h5 >Performing Members</h5>
-            
+        <div class="col-lg-3 col-md-6">
+            <div class="card  mt-5 p-5" style=" background:  #e3f8fa;">
+                <h2 class="text-dark font-weight-bold">90-120 mins</h2>
+                <h4 class="text-dark mt-2">Performing Duration</h4>
             </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-            <div class="card" style="width: 12rem; height: 12rem; background:  #ffe6e2;;">
-                <h4 >Can Travel</h4>
-                <h5 >Performing Duration</h5>
-            
+        <div class="col-lg-3 col-md-6">
+            <div class="card  mt-5 p-5" style=" background:  #ffe6e2;">
+                <h2 class="text-dark font-weight-bold">Can Travel</h2>
+                <h4 class="text-dark mt-2">Nationwide</h4>
             </div>
         </div>
-    <!-- </div> -->
-</div>
-<!--  -->
-
-
-
-
-
-
-
-<!-- <div class="profile-content-main container-fluid">
-
-
-    <h3 style="margin-top: 30px;">Performens Details</h3> <br>
-    <div class="container gallery" style="display: grid; grid-template-columns: auto auto auto auto;">
-        <div class="card" style="width: 12rem; height: 12rem; background:  #fff1c0;;">
-            <h4 style="margin-top: 5rem; color: #f8c409;">0</h4>
-            <h5 style="margin-top: 8px; color: #f8c409;">Performence</h5>
-
-        </div>
-        <div class="card" style="width: 12rem; height: 12rem; background:  #f5e6fe;;;">
-            <h4 style="margin-top: 5rem; color: #a511fa;;">10</h4>
-            <h5 style="margin-top: 8px; color: #a511fa;">Performing Members</h5>
-
-        </div>
-        <div class="card" style="width: 12rem; height: 12rem; background:  #e3f8fa;;">
-            <h4 style="margin-top: 5rem; color: #31e0f0;">90 - 120 Min</h4>
-            <h5 style="margin-top: 8px; color: #31e0f0;">Performing Duration</h5>
-
-        </div>
-        <div class="card" style="width: 12rem; height: 12rem; background:  #ffe6e2;;">
-            <h4 style="margin-top: 5rem; color: #f18675;">Can Travel</h4>
-            <h5 style="margin-top: 8px; color: #f18675;">Performing Duration</h5>
-
-        </div>
-
-
-
     </div>
-</div> -->
-<!-- <hr style="box-shadow: 0 3px 15px rgb(0 0 0 / 50%);height: 1px;background: rgb(0 0 0 / 30%);"> -->
+</div>
+</section>
+
+
+
+
 
 
 <!-- rating section -->
@@ -258,8 +262,8 @@
                         <p class="sm-text mb-0 text-muted">POSITIVE REVIEWS</p>
                         <h4 class="green-text">93%</h4>
                     </div>
-                    <div class="ml-md-auto p-2 mx-md-2 pt-4 pt-md-3"> <button class="btn btn-red px-4">WRITE A
-                            REVIEW</button> </div>
+                    <!-- <div class="ml-md-auto p-2 mx-md-2 pt-4 pt-md-3"> <button class="btn btn-red px-4">WRITE A
+                            REVIEW</button> </div> -->
                 </div>
 
                 <div class="review p-5">
@@ -318,19 +322,9 @@
         </div>
     </div>
 </div>
-<script>
-    $('#gallerybtn').click(function () {
-        $('#video').hide()
-        $('#gallery').show()
-    })
-    $('#videobtn').click(function () {
-        $('#gallery').hide()
-        $('#video').show()
-    })
-    $('#readmorebtn').click(function () {
-        $('#readmore').toggle()
-    })
-</script>
+
+  
+
 
 
 <br><br>

@@ -19,3 +19,5 @@ def fnprofile(req):
     return render(req,'art_profile.html')
 def fnuserlogin(req):
     return render(req,'ulogin.html')
+def fncart(req):
+    return render(req,'cart.html')

@@ -1,0 +1,263 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+
+
+<style>
+    
+    .bs4-order-tracking {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: #878788;
+    margin-top: 30px
+}
+
+.bs4-order-tracking li {
+    list-style-type: none;
+    font-size: 13px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400;
+    color: #000000;
+    text-align: center
+}
+
+.bs4-order-tracking li:first-child:before {
+    margin-left: 15px !important;
+    padding-left: 11px !important;
+    text-align: left !important
+}
+
+.bs4-order-tracking li:last-child:before {
+    margin-right: 5px !important;
+    padding-right: 11px !important;
+    text-align: right !important
+}
+
+.bs4-order-tracking li>div {
+    color: #fff;
+    width: 29px;
+    text-align: center;
+    line-height: 29px;
+    display: block;
+    font-size: 12px;
+    background: #000000;
+    border-radius: 50%;
+    margin: auto
+}
+
+.bs4-order-tracking li:after {
+    content: '';
+    width: 150%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 15px;
+    z-index: -1
+}
+
+.bs4-order-tracking li:first-child:after {
+    left: 50%
+}
+
+.bs4-order-tracking li:last-child:after {
+    left: 0% !important;
+    width: 0% !important
+}
+
+.bs4-order-tracking li.active {
+    font-weight: bold;
+    color: #dc3545
+}
+
+.bs4-order-tracking li.active>div {
+    background: #dc3545
+}
+
+.bs4-order-tracking li.active:after {
+    background: #dc3545
+}
+
+.card-timeline {
+    padding: 30px;
+    background-image: url(../static/img/cartbg.jpg);
+    background-size: cover;
+    z-index: 0
+}
+td img{
+    width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+td h4{
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-top: 34px;
+}
+.actions{
+    width: 400px;
+    text-align: right;
+}
+
+</style>
+
+<section class="cart-head">
+    <div class="row ">
+        <div class="col-lg-12">
+            <div class="cart-status">
+                <div class="card card-timeline px-2 border-none  ">
+                    <ul class="bs4-order-tracking ">
+                        <li class="step active">
+                            <div><i class="far fa-shopping-cart"></i></div> Your Cart
+                        </li>
+                        <li class="step ">
+                            <div><i class="fad fa-circle"></i></div> step 1
+                        </li>
+                        <li class="step">
+                            <div><i class="fad fa-circle"></i></div> step 2
+                        </li>
+                        <li class="step ">
+                            <div><i class="fas fa-check"></i></div> done
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</section>
+<section class="cart-body">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-lg-8 col-12">
+                <table class="table table-hover table-responsive table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">Artist Details</th>
+                        <th></th>
+                        <th class="actions" scope="col">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr >
+                        <td >
+                          <a href="/user/artist-profile" class="btn"> <img src="{% static 'img/category/band3.jpg' %}" alt=""></a> 
+                        </td>
+                        <td  >
+                            <h4 class="text-uppercase  ">team rock</h4>
+                        </td>
+                        <td class="actions"><button class="btn mt-4"><i class="fas fa-trash-alt"></i></button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="col-lg-4 col-12 mt-lg-0 mt-5 ">
+                <form class="bg-light p-5 ">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Date Here</label>
+                      <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                   
+                    <button type="submit" class="btn mx-auto btn-primary" id="check">Checkout</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="user-details mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form class="p-5">
+                     <div class="card p-lg-5 p-1 bg-light">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h4 class="text-uppercase font-weight-bold mb-3 p-2"> 1. your details</h4>
+                                <div class="form-group">
+                                    <label for="">Full Name</label>
+                                    <input type="text" class="form-control" id="">
+                                  </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input type="email" class="form-control" id="">
+                                  </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="">Phone</label>
+                                    <input type="text" class="form-control" id="">
+                                  </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <a href="#" class="btn btn-outline-primary">Previous</a>
+                                <a href="#" class="btn btn-primary">Continue</a>
+                            </div>
+                        </div>
+                     </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="user-details mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form class="p-5">
+                     <div class="card p-lg-5 p-1 bg-light">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h4 class="text-uppercase font-weight-bold mb-3 p-2"> 2. Event details</h4>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="">Event Type</label>
+                                    <select class="form-control" id="">
+                                      <option value="" disabled selected></option>
+                                      <option>charity</option>
+                                      <option>Restorent</option>
+                                      <option>Campus</option>
+                                      <option>Corporate</option>
+                                      <option>Exhibition</option>
+                                    </select>
+                                  </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="">Event Date</label>
+                                    <input type="date" class="form-control" id="">
+                                  </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="">Venu Address</label>
+                                    <input type="text" class="form-control" id="">
+                                  </div>
+                            
+                                <div class="form-group">
+                                    <label for="">Requirement Details (<span class="text-muted">optional</span>)</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                                  <a href="#" class="btn btn-outline-primary">Previous</a>
+                                  <a href="#" class="btn btn-primary">Continue</a>
+                            </div>
+                        </div>
+                     </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+{% endblock %}

@@ -13,26 +13,25 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
 <style>
-  
+    .carousel-item.first {
+        background-image: url('{% static "img/category/homebg.jpg"%}');
 
-  .carousel-item.first {
-    background-image: url('{% static "img/category/homebg.jpg"%}');
+    }
 
-}
+    .carousel-item.second {
+        background-image: url('{% static "img/guitarbg.jpg"%}');
 
-.carousel-item.second {
-    background-image: url('{% static "img/guitarbg.jpg"%}');
+    }
 
-}
+    .carousel-item.third {
+        background-image: url('{% static "img/bg3.jpg"%}');
 
-.carousel-item.third {
-    background-image: url('{% static "img/bg3.jpg"%}');
+    }
 
-}
-.row{
-    margin-right: 15px;
-    margin-left: 15px;
-}
+    .row {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
 </style>
 <link rel="stylesheet" href="{% static 'css/u_home.css'%}">
 <div class="container-fluid p-0">
@@ -48,9 +47,13 @@
                     <div class="row align-items-center h-100">
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="caption animate__animated animate__fadeIn">
-                                <h2 class="animate__animated animate__fadeInLeft" style="color: rgb(251, 255, 8); ">WELCOME TO ARTOMATIC</h2>
-                                <p class="animate__animated animate__fadeInRight">Creating exceptional experience, at all times since 2022. <br>Join India's largest Artist Booking and Discovery Platform, and brace your online presence</p>
-                                <a class="animate__animated animate__bounceInUp btn delicious-btn" href="/user/user-login/" >Login</a> 
+                                <h2 class="animate__animated animate__fadeInLeft" style="color: rgb(251, 255, 8); ">
+                                    WELCOME TO ARTOMATIC</h2>
+                                <p class="animate__animated animate__fadeInRight">Creating exceptional experience, at
+                                    all times since 2022. <br>Join India's largest Artist Booking and Discovery
+                                    Platform, and brace your online presence</p>
+                                <a class="animate__animated animate__bounceInUp btn delicious-btn"
+                                    href="/user/user-login/">Login</a>
                             </div>
                         </div>
                     </div>
@@ -98,50 +101,52 @@
         </button> -->
     </div>
 </div>
-  
+
 
 
 <div class="row">
     <div class="col-lg-12">
         <div class="jumbotron jumbotron-fluid category">
-            <div class="container " >
-              <h1 class="display-5 text-danger heading">BOOK ARTIST</h1>
-              <p class="lead">Happy Clients Equals Happy Us</p>
-              <p class="category-para" >We always thrive for the best and our clients feedback is what motivates us to achieve that extra mile</p>
+            <div class="container ">
+                <h1 class="display-5 text-danger heading">BOOK ARTIST</h1>
+                <p class="lead">Happy Clients Equals Happy Us</p>
+                <p class="category-para">We always thrive for the best and our clients feedback is what motivates us to
+                    achieve that extra mile</p>
             </div>
             <div class="category-btn">
                 <a href="#" class="btn active"><i class="fas fa-drum"></i> BAND</a>
                 <a href="#" class="btn"><i class="fas fa-compact-disc"></i> DJ</a>
-                <a href="#"class="btn"><i class="fas fa-american-sign-language-interpreting"></i> DANCE</a>
-                <a href="#"class="btn"><i class="fal fa-magic"></i> MAGICIAN</a>
-                <a href="#"class="btn"><i class="fas fa-camera-retro"></i> PHOTOGRAPY</a>
+                <a href="#" class="btn"><i class="fas fa-american-sign-language-interpreting"></i> DANCE</a>
+                <a href="#" class="btn"><i class="fal fa-magic"></i> MAGICIAN</a>
+                <a href="#" class="btn"><i class="fas fa-camera-retro"></i> PHOTOGRAPY</a>
             </div>
-          </div>
-          
+        </div>
+
     </div>
 </div>
- 
-    <section >
-        <div class="container">
-          <div class="row"> 
-              <div class="col-12 text-right">
-                  <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
-                      <i class="fa fa-arrow-left"></i>
-                  </a>
-                  <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
-                      <i class="fa fa-arrow-right"></i>
-                  </a>
-              </div>
-              <div class="col-12">
-                  <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
-      
-                      <div class="carousel-inner">
-                          <div class="carousel-item active">
-                              <div class="row">
-      
-                                  <div class="col-md-4 mb-3">
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-right">
+                <a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+                <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
                                     <div class="card ">
-                                        <img class="img-fluid" alt="100%x280"  src="{% static 'img/category/dance.jpg' %}">
+                                        <img class="img-fluid" alt="100%x280"
+                                            src="{% static 'img/category/dance.jpg' %}">
                                         <div class="card-body">
                                             <h4 class="card-title">Fusion Addiction</h4>
                                             <div class="rating mb-3 text-warning">
@@ -150,155 +155,175 @@
                                                 <i class="fal fa-star"></i>
                                                 <i class="fal fa-star"></i>
                                                 <i class="fal fa-star"></i>
-                                                
-                                            </div>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="/user/artist-profile" class="btn btn-outline-danger">See Price and Book</a>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="{% static 'img/category/dance.jpg' %}">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Fusion Addiction</h4>
-                                            <div class="rating mb-3 text-warning">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fal fa-star"></i>
-                                                <i class="fal fa-star"></i>
-                                                <i class="fal fa-star"></i>
-                                                
-                                            </div>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="{% static 'img/category/dance.jpg' %}">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Fusion Addiction</h4>
-                                            <div class="rating mb-3 text-warning">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fal fa-star"></i>
-                                                <i class="fal fa-star"></i>
-                                                <i class="fal fa-star"></i>
-                                                
-                                            </div>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
-                                        </div>
-                                    </div>
-                                  </div>
-      
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                              <div class="row">
-      
-                                  <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Fusion Addiction</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Fusion Addiction</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Fusion Addiction</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
-                                        </div>
-                                    </div>
-                                  </div>
-      
-                              </div>
-                          </div>
-                          <div class="carousel-item">
-                              <div class="row">
-      
-                                  <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Fusion Addiction</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Fusion Addiction</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
-                                        </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-4 mb-3">
-                                    <div class="card">
-                                        <img class="img-fluid" alt="100%x280" src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
-                                        <div class="card-body">
-                                            <h4 class="card-title">Fusion Addiction</h4>
-                                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
-                                        </div>
-                                    </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      </section>
 
-      <section class="about-us mt-xs-5 " >
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-12">
-                      <h3 class="text-center font-weight-bold text-uppercase text-danger mb-5">about us</h3>
-                  </div>
-                  <div class="col-lg-6">
-                    <div class="content p-2 ">
-                        <h3 class="text-dark">Lorem ipsum dolor sit amet consectetur</h3>
-                        <p class="text-muted"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora necessitatibus delectus doloremque perferendis aliquam cupiditate officiis omnis sed tenetur quod deleniti blanditiis laudantium qui totam sapiente velit maiores, in ex?</p>
-                        <div class="button">
-                            <a class="btn btn-outline-info" href="#">read more</a>
+                                            </div>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional content.</p>
+                                            <a href="/user/artist-profile" class="btn btn-outline-danger">See Price and
+                                                Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280"
+                                            src="{% static 'img/category/dance.jpg' %}">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Fusion Addiction</h4>
+                                            <div class="rating mb-3 text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fal fa-star"></i>
+                                                <i class="fal fa-star"></i>
+                                                <i class="fal fa-star"></i>
+
+                                            </div>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional content.</p>
+                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280"
+                                            src="{% static 'img/category/dance.jpg' %}">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Fusion Addiction</h4>
+                                            <div class="rating mb-3 text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fal fa-star"></i>
+                                                <i class="fal fa-star"></i>
+                                                <i class="fal fa-star"></i>
+
+                                            </div>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional content.</p>
+                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
-                        
-                    </div>
-                  </div>
-                  <div class="col-lg-6">
-                      <div class="card p-3" style="border: none;">
-                         <img src="{% static 'img/about.jpg' %}" alt="">
-                      </div>
-                  </div>
-              </div>
-          </div>
+                        <div class="carousel-item">
+                            <div class="row">
 
-      </section>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280"
+                                            src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Fusion Addiction</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional content.</p>
+                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280"
+                                            src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Fusion Addiction</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional content.</p>
+                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280"
+                                            src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Fusion Addiction</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional content.</p>
+                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280"
+                                            src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Fusion Addiction</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional content.</p>
+                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280"
+                                            src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Fusion Addiction</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional content.</p>
+                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <img class="img-fluid" alt="100%x280"
+                                            src="https://images.unsplash.com/photo-1517760444937-f6397edcbbcd?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjMyMDc0fQ&amp;s=42b2d9ae6feb9c4ff98b9133addfb698">
+                                        <div class="card-body">
+                                            <h4 class="card-title">Fusion Addiction</h4>
+                                            <p class="card-text">With supporting text below as a natural lead-in to
+                                                additional content.</p>
+                                            <a href="" class="btn btn-outline-danger">See Price and Book</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-us mt-xs-5 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="text-center font-weight-bold text-uppercase text-danger mb-5">about us</h3>
+            </div>
+            <div class="col-lg-6">
+                <div class="content p-2 ">
+                    <h3 class="text-dark">Lorem ipsum dolor sit amet consectetur</h3>
+                    <p class="text-muted"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+                        necessitatibus delectus doloremque perferendis aliquam cupiditate officiis omnis sed tenetur
+                        quod deleniti blanditiis laudantium qui totam sapiente velit maiores, in ex?</p>
+                    <div class="button">
+                        <a class="btn btn-outline-info" href="#">read more</a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card p-3" style="border: none;">
+                    <img src="{% static 'img/about.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 
 <!-- about -->
@@ -333,7 +358,7 @@
 
 
 
-  <!-- <script>
+<!-- <script>
       $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
@@ -351,7 +376,7 @@
     }
 })
   </script> -->
-  
+
 
 
 

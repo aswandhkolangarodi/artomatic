@@ -1,0 +1,51 @@
+
+
+.container {
+    background: #fff;
+    padding: 20px 20px 20px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 945px;
+    border: 1px solid;
+    
+}
+
+iframe {
+    padding: 50px;
+    width: 85%;
+    height: 80%;
+    /* margin-top: 80px; */
+    
+    
+}
+
+.text-muted {
+    font-size: 13px;
+    font-weight: bold
+}
+
+.form-title {
+    font-weight: bold
+}
+
+.form-group label {
+    font-size: 11px;
+    font-weight: bold;
+    padding-left: 5px;
+    color: #828282
+}
+
+.form-control {
+    border: none;
+    border-radius: 20px;
+    background: rgba(165, 147, 69, 0.075);
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.2)
+}
+
+
+.form-control:focus {
+    color: #495057;
+    border-color: #fff !important;
+    outline: 0;
+    box-shadow: 0 1px 1px 1px rgba(0, 123, 255, .25) !important
+}

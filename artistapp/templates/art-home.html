@@ -1,0 +1,81 @@
+{% extends 'art-dash-master.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div class="home-section pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2"></div>
+           <div class="col-lg-8">
+            <div class="card p-3 mx-auto text-center " style="background: none; border: none;">
+                <div class="container">
+                    <div class="progress mt-3">
+                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                      </div>
+                      <a href="#" class=" btn btn-info  my-3 ">Complete Profile</a>
+
+                </div>
+            </div>
+           </div>
+           <div class="col-lg-2"></div>
+        </div>
+
+    </div>
+    
+</div>
+
+<section class="profile-image pt-3">
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="card mx-auto text-center    " style="width: 18rem;overflow: hidden;">
+                <img src="{% static 'img/category/band3.jpg' %}" class="card-img-top img-thumbnail" alt="profile image">
+                <div class="card-body">
+                    <h4 class="lead">ASWANDH</h4>
+                    <form>
+                        <label for="fileUpload">Change Image</label>
+                        <input type="file" id="fileUpload">
+                      </form>                </div>
+              </div>
+        </div> 
+        <div class="col-lg-5 col-md-6">
+            <div class="mt-5">
+                  <p class="lead">Your Profile is under Review.
+                    Add details and complete your profile to get live on Artomatic.</p>
+              </div>
+        </div> 
+    </div>  
+</section>
+
+
+
+
+
+<!-- <script>
+    $(document).ready(function(){
+
+
+
+function setProgress(elem, percent) {
+var
+degrees = percent * 3.6,
+transform = /MSIE 9/.test(navigator.userAgent) ? 'msTransform' : 'transform';
+elem.querySelector('.counter').setAttribute('data-percent', Math.round(percent));
+elem.querySelector('.progressEnd').style[transform] = 'rotate(' + degrees + 'deg)';
+elem.querySelector('.progress').style[transform] = 'rotate(' + degrees + 'deg)';
+if(percent >= 50 && !/(^|\s)fiftyPlus(\s|$)/.test(elem.className))
+elem.className += ' fiftyPlus';
+}
+
+(function() {
+var
+elem = document.querySelector('.circlePercent'),
+percent = 0;
+(function animate() {
+setProgress(elem, (percent += .25));
+if(percent < 100) setTimeout(animate, 15); })(); })(); });
+</script> -->
+
+{% endblock %}

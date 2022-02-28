@@ -17,7 +17,9 @@ def fnbrowsecat(req):
     return render(req,'browse_cat.html')
 def fnprofile(req):
     return render(req,'art_profile.html')
-def fnuserlogin(req):
-    return render(req,'ulogin.html')
 def fncart(req):
     return render(req,'cart.html')
+def fnmembership(req):
+    return render(req,'membership.html')
+def fnabout(req):
+    return render(req,'about.html')

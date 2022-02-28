@@ -10,6 +10,8 @@ urlpatterns = [
     path('category/',views.fncategory,name='category'),
     path('browse-cat/',views.fnbrowsecat),
     path('artist-profile',views.fnprofile,name="artist-profile"),
-    path('user-login/',views.fnuserlogin,name="user-login"),
-    path('cart',views.fncart,name="cart")
+    path('cart',views.fncart,name="cart"),
+    path('membership',views.fnmembership,name="membership"),
+    path('about',views.fnabout,name="about")
+    
 ]

@@ -1,0 +1,195 @@
+{% extends 'art-dash-master.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .avatar-demo {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.card{
+    border-radius: 10px;
+}
+</style>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<section class="status-top p-lg-5 mt-lg-0 mt-3">
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-12 ">
+                <div class="card p-3  text-center shadow-sm">   
+                    <div class="container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlIy4kRyqQYE-eyQQEMvkgyyDv0IEHECKuNQ&usqp=CAU" alt="Avatar" class="mx-auto avatar-demo">
+                    <h4 class="text-muted my-2">John Wick - Detailed Analytics of John Wick's Artomatic Profile</h4>
+                    <a class="btn btn-success my-2" data-toggle="modal" data-target="#exampleModal" ><span><i class="fa-solid fa-chart-line"></i></span> View Mine</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="status-chart-card">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 "></div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card my-2  p-4 text-center" style="background:  #b9dbe1;">
+                    <h2 class="   font-weight-bold"><i class="fa-solid fa-eye"></i></h2>
+                    <p class="text-dark ">profile views</p>
+                    <h6 class="">200</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card my-2 p-4 text-center" style="background:  #dfa0a6;">
+                    <h2 class=" font-weight-bold"><i class="fa-solid fa-rocket"></i></h2>
+                    <p class="text-dark">mins spend on profile</p>
+                    <h6 class="">580</h6>
+                </div>
+            </div>
+            <div class="col-lg-3 "></div>
+        </div>
+    </div>
+</section>
+<section class="status-charts p-lg-5 ">
+    <div class="row">
+        <div class="container">
+           <div class="col-lg-12">
+            <div class="card ">
+                <div class="card-header">
+                  <h4>Profile Views</h4>
+                </div>
+                <div class="card-body ">
+                    <div class="mx-auto" id="myChart-line" style="width:100%; max-width:600px; height:500px;"></div>
+                </div>
+                <div class="card-footer text-right">
+                    <a class="btn btn-success my-2" data-toggle="modal" data-target="#exampleModal"><span><i class="fa-solid fa-chart-line"></i></span> View Mine</a>
+                </div>
+              </div>
+              <div class="card my-5">
+                <div class="card-header">
+                  <h4>Time spend on profile</h4>
+                </div>
+                <div class="card-body ">
+                    <div class="mx-auto " id="myChart-bar" style="width:100%; max-width:600px; height:500px;"></div>
+                </div>
+                <div class="card-footer text-right">
+                    <a class="btn btn-success my-2" data-toggle="modal" data-target="#exampleModal"><span><i class="fa-solid fa-chart-line"></i></span> View Mine</a>
+                </div>
+              </div>
+              <div class="card ">
+                <div class="card-header">
+                  <h4>Profile Viewed by city</h4>
+                </div>
+                <div class="card-body ">
+                    <div class="mx-auto" id="myChart-pie" style="width:100%; max-width:600px; height:500px;"></div>
+                </div>
+                <div class="card-footer text-right">
+                    <a class="btn btn-success my-2" data-toggle="modal" data-target="#exampleModal"><span><i class="fa-solid fa-chart-line"></i></span> View Mine</a>
+                </div>
+              </div>
+              <div class="card my-5" style="background: none; border: none;">
+                <a href="/artist/artist-subscription" class="btn mx-auto btn-warning text-white">View Subscription Plans</a>
+              </div>
+           </div>
+        </div>
+    </div>
+
+</section>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h6 class="">You first need to Subscribe in order to view your status</h6>
+        </div>
+        <div class="modal-footer">
+          <a href="/artist/artist-subscription" class="btn btn-primary">Okay!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- line chart -->
+<script>
+    google.charts.load('current',{packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    function drawChart() {
+    // Set Data
+    var data = google.visualization.arrayToDataTable([
+      ['Price', 'Size'],
+      [0,0],[60,8],[70,8],[80,9],[90,9],
+      [100,9],[110,10],[120,11],
+      [130,14],[140,14],[150,15]
+    ]);
+    // Set Options
+    var options = {
+      title: '',
+      hAxis: {title: ''},
+      vAxis: {title: ''},
+      legend: 'none'
+    };
+    // Draw
+    var chart = new google.visualization.LineChart(document.getElementById('myChart-line'));
+    chart.draw(data, options);
+    }
+    </script>
+    <!-------------------------------------------------------------------------------------  -->
+    <!-- bar chart -->
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Contry', 'Mhl'],
+          ['Italy',55],
+          ['France',49],
+          ['Spain',44],
+          ['USA',24],
+          ['Argentina',15]
+        ]);
+        
+        var options = {
+          title:'World Wide Wine Production'
+        };
+        
+        var chart = new google.visualization.BarChart(document.getElementById('myChart-bar'));
+          chart.draw(data, options);
+        }
+        </script>
+        <!-- ----------------------------------------------------------------------------------------- -->
+
+        <!-- pie chart -->
+        <script>
+            google.charts.load('current', {'packages':['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+            
+            function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Contry', 'Mhl'],
+              ['Newdelhi',54.8],
+              ['Mumbie',48.6],
+              ['Pune',44.4],
+              ['Noida',23.9],
+              ['Kolkata',14.5]
+            ]);
+            
+            var options = {
+              title:'profile viewed by city'
+            };
+            
+            var chart = new google.visualization.PieChart(document.getElementById('myChart-pie'));
+              chart.draw(data, options);
+            }
+            </script>
+{% endblock %}

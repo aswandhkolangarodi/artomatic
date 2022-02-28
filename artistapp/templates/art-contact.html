@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<style>
+<!-- <style>
     .contact{
         width: 500px;
         padding: 30px;
@@ -39,10 +39,12 @@
 
     </form>
 
-    
+  </div>
+</div>
+
   
   
-  <!-- Modal  email-->
+  Modal  email
   <div class="modal fade" id="email-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -68,7 +70,7 @@
 
  
   
-  <!-- Modal phone-->
+  Modal phone
   <div class="modal fade" id="phone-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -88,10 +90,110 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+<style>
+ 
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative
+}
+
+#contactus {
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 150px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24)
+}
+
+#contactus {}
+
+#contactus h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px
+}
+
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%
+}
+
+#contactus input[type="text"],
+#contactus input[type="email"],
+#contactus input[type="tel"],
+#contactus input[type="url"],
+#contactus textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px
+}
+
+#contactus input[type="text"]:hover,
+#contactus input[type="email"]:hover,
+#contactus input[type="tel"]:hover,
+#contactus input[type="url"]:hover,
+#contactus textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa
+}
 
 
 
-</div>
-</div>
+#contactus input:focus,
+#contactus textarea:focus {
+    outline: 0;
+    border: 1px solid #aaa
+}
+
+::-webkit-input-placeholder {
+    color: #888
+}
+
+:-moz-placeholder {
+    color: #888
+}
+
+::-moz-placeholder {
+    color: #888
+}
+
+:-ms-input-placeholder {
+    color: #888
+}
+</style>
+
+
+    <section class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="container">
+              <form id="contactus" action="" method="post">
+                  <h3>Contact Details</h3>
+                  <fieldset> <input  placeholder="aswandh k" type="text" tabindex="1"  autofocus> </fieldset>
+                  <fieldset> <input placeholder="aswandhk2000@gmail.com" type="email" tabindex="2" > </fieldset>
+                  <fieldset> <input placeholder="9207588472" type="tel" tabindex="3" > </fieldset>
+                  <fieldset> <a name="submit" class="btn btn-success" type="submit" id="contactus-submit" ><i id="icon" class=""></i> Submit change</a> </fieldset>
+              </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
 {% endblock %}

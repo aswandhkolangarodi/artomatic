@@ -2,247 +2,307 @@
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/brows_cat.css' %}"> 
-    <div class="container">
-        
-                <button class="btn p-3 btn-hide text-uppercase" type="button" data-toggle="collapse" data-target="#filterbar" aria-expanded="false" aria-controls="filterbar" id="filter-btn" > <span class="fas fa-angle-left" id="filter-angle"></span> <span id="btn-txt">filters</span> </button>
-        </div>  
-        <div id="content" class="my-5">
-            <div id="filterbar" class="collapse">
-                <div class="box border-bottom">
-                    <div class="form-group text-center">
-                        <div class="btn-group" data-toggle="buttons"> <label class="btn btn-success form-check-label"> <input class="form-check-input" type="radio"> Reset </label> <label class="btn btn-success form-check-label active"> <input class="form-check-input" type="radio" checked> Apply </label> </div>
-                    </div>
-                </div>
-                <div class="box border-bottom">
-                    <div class="box-label text-uppercase d-flex align-items-center">Refined by gender <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#size" aria-expanded="false" aria-controls="size"><span class="fas fa-plus"></span></button> </div>
-                    <div id="size" class="collapse">
-                        <div class="my-1"> <label class="tick">Male <input type="radio" name="gender"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Female <input type="radio" name="gender"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Other <input type="radio" name="gender"> <span class="check"></span> </label> </div>
+<link rel="stylesheet" href="{% static 'css/brows_cat.css' %}">
+<div class="container">
 
-                    </div>
+    <button class="btn p-3 btn-hide text-uppercase" type="button" data-toggle="collapse" data-target="#filterbar"
+        aria-expanded="false" aria-controls="filterbar" id="filter-btn"> <span class="fas fa-angle-left"
+            id="filter-angle"></span> <span id="btn-txt">filters</span> </button>
+</div>
+<div id="content" class="my-5">
+    <div id="filterbar" class="collapse">
+        <div class="box border-bottom">
+            <div class="form-group text-center">
+                <div class="btn-group" data-toggle="buttons"> <label class="btn btn-success form-check-label"> <input
+                            class="form-check-input" type="radio"> Reset </label> <label
+                        class="btn btn-success form-check-label active"> <input class="form-check-input" type="radio"
+                            checked> Apply </label> </div>
+            </div>
+        </div>
+        <div class="box border-bottom">
+            <div class="box-label text-uppercase d-flex align-items-center">Refined by gender <button
+                    class="btn ml-auto" type="button" data-toggle="collapse" data-target="#size" aria-expanded="false"
+                    aria-controls="size"><span class="fas fa-plus"></span></button> </div>
+            <div id="size" class="collapse">
+                <div class="my-1"> <label class="tick">Male <input type="radio" name="gender"> <span
+                            class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">Female <input type="radio" name="gender"> <span
+                            class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">Other <input type="radio" name="gender"> <span
+                            class="check"></span> </label> </div>
+
+            </div>
+        </div>
+        <div class="box border-bottom">
+            <div class="box-label text-uppercase d-flex align-items-center">refined by genre <button class="btn ml-auto"
+                    type="button" data-toggle="collapse" data-target="#inner-box" aria-expanded="false"
+                    aria-controls="inner-box" id="out" onclick="outerFilter()"> <span class="fas fa-plus"></span>
+                </button> </div>
+            <div id="inner-box" class="collapse mt-2  mr-1">
+                <div class="my-1"> <label class="tick">Rock <input type="checkbox"> <span class="check"></span> </label>
                 </div>
-                <div class="box border-bottom">
-                    <div class="box-label text-uppercase d-flex align-items-center">refined by genre <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box" aria-expanded="false" aria-controls="inner-box" id="out" onclick="outerFilter()"> <span class="fas fa-plus"></span> </button> </div>
-                    <div id="inner-box" class="collapse mt-2  mr-1">
-                        <div class="my-1"> <label class="tick">Rock <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Rock n roll <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Folk <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Pop <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Rap <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Sufi <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Fusion <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Hip hop <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Orchestra <input type="checkbox" > <span class="check"></span> </label> </div>
-                    </div>
+                <div class="my-1"> <label class="tick">Rock n roll <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Folk <input type="checkbox"> <span class="check"></span> </label>
                 </div>
-                <div class="box border-bottom">
-                    <div class="box-label text-uppercase d-flex align-items-center">refined by language <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box2" aria-expanded="false" aria-controls="inner-box2"><span class="fas fa-plus"></span></button> </div>
-                    <div id="inner-box2" class="collapse mt-2 mr-1">
-                        <div class="my-1"> <label class="tick">English <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Malayalam <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Hindi <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Gujarathi <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Marathi <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Punjabi <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Bengali <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Tamil <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Telugu <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Rajasthani <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Kannada <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Assamese <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Urdu <input type="checkbox" > <span class="check"></span> </label> </div>
-                    </div>
+                <div class="my-1"> <label class="tick">Pop <input type="checkbox"> <span class="check"></span> </label>
                 </div>
-                <div class="box border-bottom">
-                    <div class="box-label text-uppercase d-flex align-items-center">Refined by Event <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box2" aria-expanded="false" aria-controls="inner-box2"><span class="fas fa-plus"></span></button> </div>
-                    <div id="inner-box2" class="collapse mt-2 mr-1">
-                        <div class="my-1"> <label class="tick">Charity <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Restaurant <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Campus <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Corporate <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Exhibition <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Inauguration <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">photo/video shoot <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Religious <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Festival <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Fashion show <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Kids party <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Private party <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Professional hiring <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Wedding <input type="checkbox" > <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">Virtual <input type="checkbox"> <span class="check"></span> </label> </div>
-                        <div class="my-1"> <label class="tick">video shoutout <input type="checkbox" > <span class="check"></span> </label> </div>
-                    </div>
+                <div class="my-1"> <label class="tick">Rap <input type="checkbox"> <span class="check"></span> </label>
                 </div>
-                <div class="box ">
-                    <div class="box-label text-uppercase d-flex align-items-center">price <button class="btn ml-auto" type="button" data-toggle="collapse" data-target="#price" aria-expanded="false" aria-controls="price"><span class="fas fa-plus"></span></button> </div>
-                    <div class="collapse" id="price">
-                        <div class="middle">
-                            <div class="multi-range-slider"> <input type="range" id="input-left" min="0" max="100" value="10"> <input type="range" id="input-right" min="0" max="100" value="50">
-                                <div class="slider">
-                                    <div class="track"></div>
-                                    <div class="range"></div>
-                                    <div class="thumb left"></div>
-                                    <div class="thumb right"></div>
-                                </div>
-                            </div>
+                <div class="my-1"> <label class="tick">Sufi <input type="checkbox"> <span class="check"></span> </label>
+                </div>
+                <div class="my-1"> <label class="tick">Fusion <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Hip hop <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Orchestra <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+            </div>
+        </div>
+        <div class="box border-bottom">
+            <div class="box-label text-uppercase d-flex align-items-center">refined by language <button
+                    class="btn ml-auto" type="button" data-toggle="collapse" data-target="#inner-box2"
+                    aria-expanded="false" aria-controls="inner-box2"><span class="fas fa-plus"></span></button> </div>
+            <div id="inner-box2" class="collapse mt-2 mr-1">
+                <div class="my-1"> <label class="tick">English <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Malayalam <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Hindi <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Gujarathi <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Marathi <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Punjabi <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Bengali <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Tamil <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Telugu <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Rajasthani <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Kannada <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Assamese <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Urdu <input type="checkbox"> <span class="check"></span> </label>
+                </div>
+            </div>
+        </div>
+        <div class="box border-bottom">
+            <div class="box-label text-uppercase d-flex align-items-center">Refined by Event <button class="btn ml-auto"
+                    type="button" data-toggle="collapse" data-target="#inner-box2" aria-expanded="false"
+                    aria-controls="inner-box2"><span class="fas fa-plus"></span></button> </div>
+            <div id="inner-box2" class="collapse mt-2 mr-1">
+                <div class="my-1"> <label class="tick">Charity <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Restaurant <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Campus <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Corporate <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Exhibition <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Inauguration <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">photo/video shoot <input type="checkbox"> <span
+                            class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">Religious <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Festival <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Fashion show <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Kids party <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Private party <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Professional hiring <input type="checkbox"> <span
+                            class="check"></span> </label> </div>
+                <div class="my-1"> <label class="tick">Wedding <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">Virtual <input type="checkbox"> <span class="check"></span>
+                    </label> </div>
+                <div class="my-1"> <label class="tick">video shoutout <input type="checkbox"> <span
+                            class="check"></span> </label> </div>
+            </div>
+        </div>
+        <div class="box ">
+            <div class="box-label text-uppercase d-flex align-items-center">price <button class="btn ml-auto"
+                    type="button" data-toggle="collapse" data-target="#price" aria-expanded="false"
+                    aria-controls="price"><span class="fas fa-plus"></span></button> </div>
+            <div class="collapse" id="price">
+                <div class="middle">
+                    <div class="multi-range-slider"> <input type="range" id="input-left" min="0" max="100" value="10">
+                        <input type="range" id="input-right" min="0" max="100" value="50">
+                        <div class="slider">
+                            <div class="track"></div>
+                            <div class="range"></div>
+                            <div class="thumb left"></div>
+                            <div class="thumb right"></div>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between mt-2">
-                            <div> <span id="amount-left" class="font-weight-bold"></span> <i class="fas fa-rupee-sign"></i> min </div>
-                            <div> <span id="amount-right" class="font-weight-bold"></span> <i class="fas fa-rupee-sign"></i> max </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between mt-2">
+                    <div> <span id="amount-left" class="font-weight-bold"></span> <i class="fas fa-rupee-sign"></i> min
+                    </div>
+                    <div> <span id="amount-right" class="font-weight-bold"></span> <i class="fas fa-rupee-sign"></i> max
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="products">
+        <div class="row mx-0">
+            <div class="col-lg-12">
+                <u class="text-danger text-center">
+                    <h3 class="p-3 text-info">Book Band in India</h3>
+                </u>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card d-flex flex-column align-items-center">
+                    <div class="product-name ">Team Rock</div>
+                    <div class="card-img"> <img src="{% static 'img/category/dj.jpg' %}" alt=""> </div>
+                    <div class="card-body ">
+                        <div class="text-center p-1 mt-auto">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>calicut</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center text-warning my-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fal fa-star"></i>
+                            <i class="fal fa-star"></i>
+                            <i class="fal fa-star"></i>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center price">
+                            <div class="font-weight-bold">
+                                <a href="/user/artist-profile" class="btn btn-primary">See price & Book</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="products">
-                <div class="row mx-0">
-                    <div class="col-lg-12">
-                        <u class="text-danger text-center"><h3 class="p-3 text-info">Book Band in India</h3></u>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card d-flex flex-column align-items-center">
-                            <div class="product-name ">Team Rock</div>
-                            <div class="card-img"> <img src="{% static 'img/category/dj.jpg' %}" alt=""> </div>
-                            <div class="card-body ">
-                                <div class="text-center p-1 mt-auto">
-                                    <i class="far fa-map-marker-alt"></i>
-                                    <span>calicut</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center text-warning my-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center price">
-                                    <div class="font-weight-bold">
-                                        <a href="/user/artist-profile" class="btn btn-primary">See price & Book</a>
-                                    </div>
-                                </div>
+
+            <div class="col-lg-4 col-md-6 pt-md-0 pt-3">
+                <div class="card d-flex flex-column align-items-center">
+                    <div class="product-name ">Immortal knights</div>
+                    <div class="card-img"> <img src="{% static 'img/category/band2.jpg' %}" alt=""> </div>
+                    <div class="card-body ">
+                        <div class="text-center p-1 mt-auto">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>calicut</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center text-warning my-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fal fa-star"></i>
+                            <i class="fal fa-star"></i>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center price">
+                            <div class="font-weight-bold">
+                                <a href="" class="btn btn-primary">See price & Book</a>
                             </div>
                         </div>
                     </div>
-                   
-                    <div class="col-lg-4 col-md-6 pt-md-0 pt-3">
-                        <div class="card d-flex flex-column align-items-center">
-                            <div class="product-name ">Immortal knights</div>
-                            <div class="card-img"> <img src="{% static 'img/category/band2.jpg' %}" alt=""> </div>
-                            <div class="card-body ">
-                                <div class="text-center p-1 mt-auto">
-                                    <i class="far fa-map-marker-alt"></i>
-                                    <span>calicut</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center text-warning my-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center price">
-                                    <div class="font-weight-bold">
-                                        <a href="" class="btn btn-primary">See price & Book</a>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3">
+                <div class="card d-flex flex-column align-items-center">
+                    <div class="product-name text-center">Amorphia</div>
+                    <div class="card-img"> <img src="{% static 'img/category/band3.jpg' %}" alt=""> </div>
+                    <div class="card-body ">
+                        <div class="text-center p-1 mt-auto">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>calicut</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center text-warning my-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fal fa-star"></i>
+                            <i class="fal fa-star"></i>
+                            <i class="fal fa-star"></i>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center price">
+                            <div class="font-weight-bold">
+                                <a href="" class="btn btn-primary">See price & Book</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 pt-lg-0 pt-md-4 pt-3">
-                        <div class="card d-flex flex-column align-items-center">
-                            <div class="product-name text-center">Amorphia</div>
-                            <div class="card-img"> <img src="{% static 'img/category/band3.jpg' %}" alt=""> </div>
-                            <div class="card-body ">
-                                <div class="text-center p-1 mt-auto">
-                                    <i class="far fa-map-marker-alt"></i>
-                                    <span>calicut</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center text-warning my-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center price">
-                                    <div class="font-weight-bold">
-                                        <a href="" class="btn btn-primary">See price & Book</a>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
+                <div class="card d-flex flex-column align-items-center">
+                    <div class="product-name text-center">BGM band</div>
+                    <div class="card-img"> <img src="{% static 'img/category/band4.jpg' %}" alt=""> </div>
+                    <div class="card-body ">
+                        <div class="text-center p-1 mt-auto">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>calicut</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center text-warning my-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fal fa-star"></i>
+                            <i class="fal fa-star"></i>
+                            <i class="fal fa-star"></i>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center price">
+                            <div class="font-weight-bold">
+                                <a href="" class="btn btn-primary">See price & Book</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                        <div class="card d-flex flex-column align-items-center">
-                            <div class="product-name text-center">BGM band</div>
-                            <div class="card-img"> <img src="{% static 'img/category/band4.jpg' %}" alt=""> </div>
-                            <div class="card-body ">
-                                <div class="text-center p-1 mt-auto">
-                                    <i class="far fa-map-marker-alt"></i>
-                                    <span>calicut</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center text-warning my-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center price">
-                                    <div class="font-weight-bold">
-                                        <a href="" class="btn btn-primary">See price & Book</a>
-                                    </div>
-                                </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
+                <div class="card d-flex flex-column align-items-center">
+                    <div class="product-name text-center">kross</div>
+                    <div class="card-img"> <img src="{% static 'img/category/band5.jpg' %}" alt=""> </div>
+                    <div class="card-body ">
+                        <div class="text-center p-1 mt-auto">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>calicut</span>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center text-warning my-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fal fa-star"></i>
+                            <i class="fal fa-star"></i>
+                            <i class="fal fa-star"></i>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center price">
+                            <div class="font-weight-bold">
+                                <a href="" class="btn btn-primary">See price & Book</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                        <div class="card d-flex flex-column align-items-center">
-                            <div class="product-name text-center">kross</div>
-                            <div class="card-img"> <img src="{% static 'img/category/band5.jpg' %}" alt=""> </div>
-                            <div class="card-body ">
-                                <div class="text-center p-1 mt-auto">
-                                    <i class="far fa-map-marker-alt"></i>
-                                    <span>calicut</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center text-warning my-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center price">
-                                    <div class="font-weight-bold">
-                                        <a href="" class="btn btn-primary">See price & Book</a>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
+                <div class="card d-flex flex-column align-items-center">
+                    <div class="product-name text-center">Spill#45</div>
+                    <div class="card-img"> <img src="{% static 'img/category/band6.jpg' %}" alt=""> </div>
+                    <div class="card-body ">
+                        <div class="text-center p-1 mt-auto">
+                            <i class="fa-solid fa-location-dot"></i>
+                             <span>calicut</span>
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 pt-md-4 pt-3">
-                        <div class="card d-flex flex-column align-items-center">
-                            <div class="product-name text-center">Spill#45</div>
-                            <div class="card-img"> <img src="{% static 'img/category/band6.jpg' %}" alt=""> </div>
-                            <div class="card-body ">
-                                <div class="text-center p-1 mt-auto">
-                                    <i class="far fa-map-marker-alt"></i>
-                                    <span>calicut</span>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center text-warning my-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                    <i class="fal fa-star"></i>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-center price">
-                                    <div class="font-weight-bold">
-                                        <a href="" class="btn btn-primary">See price & Book</a>
-                                    </div>
-                                </div>
+                        <div class="d-flex align-items-center justify-content-center text-warning my-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fal fa-star"></i>
+                            <i class="fal fa-star"></i>
+                            <i class="fal fa-star"></i>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center price">
+                            <div class="font-weight-bold">
+                                <a href="" class="btn btn-primary">See price & Book</a>
                             </div>
                         </div>
                     </div>
@@ -250,134 +310,136 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 
 <script>
     // For Filters
-document.addEventListener("DOMContentLoaded", function() {
-var filterBtn = document.getElementById('filter-btn');
-var btnTxt = document.getElementById('btn-txt');
-var filterAngle = document.getElementById('filter-angle');
+    document.addEventListener("DOMContentLoaded", function () {
+        var filterBtn = document.getElementById('filter-btn');
+        var btnTxt = document.getElementById('btn-txt');
+        var filterAngle = document.getElementById('filter-angle');
 
-$('#filterbar').collapse(false);
-var count = 0, count2 = 0;
-function changeBtnTxt() {
-$('#filterbar').collapse(true);
-count++;
-if (count % 2 != 0) {
-filterAngle.classList.add("fa-angle-right");
-btnTxt.innerText = "show filters"
-filterBtn.style.backgroundColor = "#36a31b";
-}
-else {
-filterAngle.classList.remove("fa-angle-right")
-btnTxt.innerText = "hide filters"
-filterBtn.style.backgroundColor = "#ff935d";
-}
+        $('#filterbar').collapse(false);
+        var count = 0, count2 = 0;
+        function changeBtnTxt() {
+            $('#filterbar').collapse(true);
+            count++;
+            if (count % 2 != 0) {
+                filterAngle.classList.add("fa-angle-right");
+                btnTxt.innerText = "show filters"
+                filterBtn.style.backgroundColor = "#36a31b";
+            }
+            else {
+                filterAngle.classList.remove("fa-angle-right")
+                btnTxt.innerText = "hide filters"
+                filterBtn.style.backgroundColor = "#ff935d";
+            }
 
-}
+        }
 
-// For Applying Filters
-$('#inner-box').collapse(false);
-$('#inner-box2').collapse(false);
+        // For Applying Filters
+        $('#inner-box').collapse(false);
+        $('#inner-box2').collapse(false);
 
-// For changing NavBar-Toggler-Icon
-var icon = document.getElementById('icon');
+        // For changing NavBar-Toggler-Icon
+        var icon = document.getElementById('icon');
 
-function chnageIcon() {
-count2++;
-if (count2 % 2 != 0) {
-icon.innerText = "";
-icon.innerHTML = '<span class="far fa-times-circle" style="width:100%"></span>';
-icon.style.paddingTop = "5px";
-icon.style.paddingBottom = "5px";
-icon.style.fontSize = "1.8rem";
+        function chnageIcon() {
+            count2++;
+            if (count2 % 2 != 0) {
+                icon.innerText = "";
+                icon.innerHTML = '<span class="far fa-times-circle" style="width:100%"></span>';
+                icon.style.paddingTop = "5px";
+                icon.style.paddingBottom = "5px";
+                icon.style.fontSize = "1.8rem";
 
 
-}
-else {
-icon.innerText = "";
-icon.innerHTML = '<span class="navbar-toggler-icon"></span>';
-icon.style.paddingTop = "5px";
-icon.style.paddingBottom = "5px";
-icon.style.fontSize = "1.2rem";
-}
-}
+            }
+            else {
+                icon.innerText = "";
+                icon.innerHTML = '<span class="navbar-toggler-icon"></span>';
+                icon.style.paddingTop = "5px";
+                icon.style.paddingBottom = "5px";
+                icon.style.fontSize = "1.2rem";
+            }
+        }
 
-// Showing tooltip for AVAILABLE COLORS
-$(function () {
-$('[data-tooltip="tooltip"]').tooltip()
-})
+        // Showing tooltip for AVAILABLE COLORS
+        $(function () {
+            $('[data-tooltip="tooltip"]').tooltip()
+        })
 
-// For Range Sliders
-var inputLeft = document.getElementById("input-left");
-var inputRight = document.getElementById("input-right");
+        // For Range Sliders
+        var inputLeft = document.getElementById("input-left");
+        var inputRight = document.getElementById("input-right");
 
-var thumbLeft = document.querySelector(".slider > .thumb.left");
-var thumbRight = document.querySelector(".slider > .thumb.right");
-var range = document.querySelector(".slider > .range");
+        var thumbLeft = document.querySelector(".slider > .thumb.left");
+        var thumbRight = document.querySelector(".slider > .thumb.right");
+        var range = document.querySelector(".slider > .range");
 
-var amountLeft = document.getElementById('amount-left')
-var amountRight = document.getElementById('amount-right')
+        var amountLeft = document.getElementById('amount-left')
+        var amountRight = document.getElementById('amount-right')
 
-function setLeftValue() {
-var _this = inputLeft,
-min = parseInt(_this.min),
-max = parseInt(_this.max);
+        function setLeftValue() {
+            var _this = inputLeft,
+                min = parseInt(_this.min),
+                max = parseInt(_this.max);
 
-_this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+            _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
 
-var percent = ((_this.value - min) / (max - min)) * 100;
+            var percent = ((_this.value - min) / (max - min)) * 100;
 
-thumbLeft.style.left = percent + "%";
-range.style.left = percent + "%";
-amountLeft.innerText = parseInt(percent * 100);
-}
-setLeftValue();
+            thumbLeft.style.left = percent + "%";
+            range.style.left = percent + "%";
+            amountLeft.innerText = parseInt(percent * 100);
+        }
+        setLeftValue();
 
-function setRightValue() {
-var _this = inputRight,
-min = parseInt(_this.min),
-max = parseInt(_this.max);
+        function setRightValue() {
+            var _this = inputRight,
+                min = parseInt(_this.min),
+                max = parseInt(_this.max);
 
-_this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+            _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
 
-var percent = ((_this.value - min) / (max - min)) * 100;
+            var percent = ((_this.value - min) / (max - min)) * 100;
 
-amountRight.innerText = parseInt(percent * 100);
-thumbRight.style.right = (100 - percent) + "%";
-range.style.right = (100 - percent) + "%";
-}
-setRightValue();
+            amountRight.innerText = parseInt(percent * 100);
+            thumbRight.style.right = (100 - percent) + "%";
+            range.style.right = (100 - percent) + "%";
+        }
+        setRightValue();
 
-inputLeft.addEventListener("input", setLeftValue);
-inputRight.addEventListener("input", setRightValue);
+        inputLeft.addEventListener("input", setLeftValue);
+        inputRight.addEventListener("input", setRightValue);
 
-inputLeft.addEventListener("mouseover", function () {
-thumbLeft.classList.add("hover");
-});
-inputLeft.addEventListener("mouseout", function () {
-thumbLeft.classList.remove("hover");
-});
-inputLeft.addEventListener("mousedown", function () {
-thumbLeft.classList.add("active");
-});
-inputLeft.addEventListener("mouseup", function () {
-thumbLeft.classList.remove("active");
-});
+        inputLeft.addEventListener("mouseover", function () {
+            thumbLeft.classList.add("hover");
+        });
+        inputLeft.addEventListener("mouseout", function () {
+            thumbLeft.classList.remove("hover");
+        });
+        inputLeft.addEventListener("mousedown", function () {
+            thumbLeft.classList.add("active");
+        });
+        inputLeft.addEventListener("mouseup", function () {
+            thumbLeft.classList.remove("active");
+        });
 
-inputRight.addEventListener("mouseover", function () {
-thumbRight.classList.add("hover");
-});
-inputRight.addEventListener("mouseout", function () {
-thumbRight.classList.remove("hover");
-});
-inputRight.addEventListener("mousedown", function () {
-thumbRight.classList.add("active");
-});
-inputRight.addEventListener("mouseup", function () {
-thumbRight.classList.remove("active");
-});
-});
+        inputRight.addEventListener("mouseover", function () {
+            thumbRight.classList.add("hover");
+        });
+        inputRight.addEventListener("mouseout", function () {
+            thumbRight.classList.remove("hover");
+        });
+        inputRight.addEventListener("mousedown", function () {
+            thumbRight.classList.add("active");
+        });
+        inputRight.addEventListener("mouseup", function () {
+            thumbRight.classList.remove("active");
+        });
+    });
 </script>
-   
+
 {% endblock %}

@@ -1,0 +1,330 @@
+{% extends 'art-dash-master.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+    .avatar-art {
+        vertical-align: middle;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    input {
+        text-align: center;
+        border: none;
+    }
+
+    .img-section {
+        padding-top: 150px;
+    }
+
+    @media(max-width:991px) {}
+
+    @media(max-width:767px) {
+        .img-section {
+            font-size: 15px;
+        }
+        .biolabel{
+            font-size: 14px;
+        }
+        .biotextlen,.bioinput{
+            font-size: 10px;
+        }
+        
+            td{
+                font-size: 13px;
+            }
+        
+    }
+</style>
+<section class="pt-4">
+    <div class="row">
+        <div class="col-lg-2 col-12 col-md-2">
+            <div class="nav flex-column nav-pills sticky-top" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+               
+                <a class="nav-link  active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+                    aria-controls="v-pills-home" aria-selected="true">Profile</a>
+                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+                    aria-controls="v-pills-profile" aria-selected="false">Image</a>
+                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+                    aria-controls="v-pills-messages" aria-selected="false">Video</a>
+                <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+                    aria-controls="v-pills-settings" aria-selected="false">Bio</a>
+                <a class="nav-link" id="v-pills-keyinfo-tab" data-toggle="pill" href="#v-pills-keyinfo" role="tab"
+                    aria-controls="v-pills-settings" aria-selected="false">KeyInfo</a>
+            </div>
+        </div>
+        <div class="col-1 d-lg-none"></div>
+        <div class="col-lg-9 col-12 col-md-9">
+
+
+
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                    aria-labelledby="v-pills-home-tab">
+                    <div class="container">
+                        <div class="card p-3 my-5 justify-content-center text-center shadow-sm" style="background: -webkit-gradient(linear, left top, right top, from(#f29263), to(#ee5a6f));
+                    background: linear-gradient(to right, #ee5a6f, #f29263)">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <img src="https://img.icons8.com/bubbles/100/000000/user.png" alt="Avatar"
+                                        class="mx-auto avatar-art">
+                                    <h4 class="text-dark my-2">John Wick </h4>
+                                    <h5 class="text-light my-2">Live Band </h5>
+                                    <a href="#" class=" btn" data-toggle="modal" data-target="#exampleModal"> <i
+                                            class="fa-solid fa-pen-to-square "></i></a>
+                                    <hr class="d-lg-none">
+                                </div>
+
+                                <div class="col-lg-6 bg-white rounded">
+                                    <h3 class="mt-3">Contact Details</h3>
+                                    <div class="form-group mt-4">
+                                        <input type="text" class="form-control" readonly
+                                            placeholder="aswandhk2000@gmail.com" id="" aria-describedby="emailHelp"
+                                            style="border: none;">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" readonly placeholder="9207588472" id=""
+                                            aria-describedby="emailHelp" style="border: none;">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="container">
+                        <div class="card my-3 text-center p-3 shadow-sm rounded">
+                            <form class="justify-content-center mx-auto">
+                                <div class="form-group ">
+                                    <label class="display-4 mb-4" for="exampleFormControlFile1">Import Picters</label>
+                                    <input type="file" class=" form-control-file" id="exampleFormControlFile1">
+                                </div>
+                            </form>
+                            <div class="row">
+                                <div class="col-lg-6 ">
+                                    <h4 class="text-muted img-section">So Empty in here, wonder what those buttons do ?
+                                    </h4>
+                                </div>
+                                <div class="col-lg-6 ">
+                                    <div class="img-container">
+                                        <img class="img-fluid"
+                                            src="https://artist.starclinch.com/assets/img/empty-guy.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="container">
+                        <div class="card my-3 text-center p-3 shadow-sm rounded">
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <label class="display-4 mx-auto mb-4" for="">Import Videos</label> <br>
+                                    <h3><a href="#" data-toggle="modal" data-target="#videomodal"
+                                            class="text-danger stretched-link text-decoration-none"><i
+                                                class="fa-brands fa-youtube"></i></a></h3>
+                                </div>
+
+                                <div class="col-lg-6 ">
+                                    <h4 class="text-muted img-section">So Empty in here, wonder what those buttons do ?
+                                    </h4>
+                                </div>
+                                <div class="col-lg-6 ">
+                                    <div class="img-container">
+                                        <img class="img-fluid"
+                                            src="https://artist.starclinch.com/assets/img/empty-guy.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                    <div class="container">
+                        <div class="card my-3  p-3 shadow-sm rounded">
+                            <form action="">
+                                <div class="form-group">
+                                    <label class="biolabel" for="exampleFormControlTextarea1">USP (Unique Selling Proposition) <span class="text-danger"> *</span> </label>
+                                    <textarea class="form-control bioinput" placeholder="tell us something that distinguishes you from the crowd"  rows="3"></textarea>
+                                    <h6 class="text-right biotextlen">max 150 chars</h6>
+                                    <hr>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="biolabel" for="exampleFormControlTextarea1">Training And Certification <span class="text-danger"> *</span> </label>
+                                    <textarea class="form-control bioinput" placeholder="tell us something that distinguishes you from the crowd"  rows="3"></textarea>
+                                    <h6 class="text-right biotextlen">Please add at least 20 characters</h6>
+                                    <hr>
+                                  </div>
+                                  <div class="form-group">
+                                    <label class="biolabel" for="exampleFormControlTextarea1">Anything Else You Want To Share <span class="text-danger"> *</span> </label>
+                                    <textarea class="form-control bioinput" placeholder="tell us something that distinguishes you from the crowd"  rows="3"></textarea>
+                                    <h6 class="text-right biotextlen">Please add at least 20 characters</h6>
+                                    <hr>
+                                  </div>
+                                  <h6 class="text-right"><button  class="btn btn-success">Save</button></h6>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-keyinfo" role="tabpanel" aria-labelledby="v-pills-keyinfo-tab">
+                        <div class="card p-3 mx-auto shadow">
+                            <table class="table table-hover table-borderless">
+                               
+                                <tbody>
+                                  <tr>
+                                    <td  >GENRE</td>
+                                    <td>BeatBoxer </td>
+                                    <td class="text-center"><a href="#" class="btn btn-light"><i class="fa-solid fa-pen"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td  >GENDER</td>
+                                    <td>Male</td>
+                                    <td class="text-center"><a href="#" class="btn btn-light"><i class="fa-solid fa-pen"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td  >LOCATION</td>
+                                    <td>Kozhikode <br> Kerala </td>
+                                    <td class="text-center"><a href="#" class="btn btn-light"><i class="fa-solid fa-pen"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td  >EVENTS PREFERRED</td>
+                                    <td><a href="/artist/event-pricing" class="text-decoration-none">Events and Pricing</a></td>
+                                    <td class="text-center"></td>
+                                  </tr>
+                                  <tr>
+                                    <td  >OPEN TO TRAVEL</td>
+                                    <td>Nationwide</td>
+                                    <td class="text-center"><a href="#" class="btn btn-light"><i class="fa-solid fa-pen"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td  >PERFORMENCE LANGUAGE(S)</td>
+                                    <td>english,hindi</td>
+                                    <td class="text-center"><a href="#" class="btn btn-light"><i class="fa-solid fa-pen"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td  >OFF STAGE MEMBER(S)</td>
+                                    <td>3</td>
+                                    <td class="text-center"><a href="#" class="btn btn-light"><i class="fa-solid fa-pen"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td  >PERFORMING MEMBER(S)</td>
+                                    <td>12</td>
+                                    <td class="text-center"><a href="#" class="btn btn-light"><i class="fa-solid fa-pen"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td  >PERFORMENCE DURATION</td>
+                                    <td>60-180 minutes</td>
+                                    <td class="text-center"><a href="#" class="btn btn-light"><i class="fa-solid fa-pen"></i></a></td>
+                                  </tr>
+                                  <tr>
+                                    <td  >PRICE RANGE</td>
+                                    <td>10,000-100,000</td>
+                                    <td class="text-center"><a href="#" class="btn btn-light "><i class="fa-solid fa-pen"></i></a></td>
+                                  </tr>
+                                  
+                                </tbody>
+                              </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Modal profile-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Profile</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Phone</label>
+                        <input type="text" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Change Profile image</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="videomodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Video URLs</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="" id="videourl">
+                    <div class="form-group ">
+                        <label for="" class="">Enter Youtube Links Here</label>
+                        <input type="text" class="form-control" placeholder="URL Here" id="" aria-describedby=""
+                            style="text-align: left;">
+                        <a href="" class="btn my-2 btn-success " id="addinput"><i class="fa-solid fa-plus"></i> Add
+                            More</a>
+                    </div>
+                </form>
+                <a href="https://www.youtube.com/t/terms" class="text-decoration-none ">YouTube Terms of Service</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <script>
+    $(document).ready(function () {
+        $("#addinput").click(function () {
+            $("#videourl").append('');
+        });
+    });
+</script> -->
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'art-dash-master.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="container">
+            <div class="card p-4 my-5">
+                <div class="card-header">
+                    <h4>Payments</h4>
+                </div>
+                <div class="table-responsive">
+                    <table class="table  table-borderless text-center">
+                        <thead>
+                          <tr>
+                            <th scope="col">Transaction ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Amount</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">#2321233</th>
+                            <td>aswandh</td>
+                            <td>11/12/2022</td>
+                            <td>20,000</td>
+                            <th><button class="bg-success text-white">Paid</button></th>
+                          </tr>
+                          <tr>
+                            <th scope="row">#2321233</th>
+                            <td>sreehari</td>
+                            <td>11/12/2022</td>
+                            <td>30,000</td>
+                            <th><button class="bg-success text-white">Paid</button></th>
+                          </tr>
+                          <tr>
+                            <th scope="row">#2321233</th>
+                            <td>shahil</td>
+                            <td>11/12/2022</td>
+                            <td>20,000</td>
+                            <th><button class="bg-danger text-white">Pending</button></th>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+{% endblock %}

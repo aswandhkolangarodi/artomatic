@@ -56,18 +56,31 @@
                         <form id="signup-form">
                             <div class="form-row">
                                 <div class="form-group col-md-12"> <input type="text" class="form-control" name="fname"
-                                        id="inputEmail4" placeholder="First Name"> </div>
-                                <div class="form-group col-md-12"> <input type="text" class="form-control" name="lname"
-                                        id="inputPassword4" placeholder="Last Name"> </div>
+                                        id="inputEmail4" placeholder="User Name"> </div>
+                               
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-12">
-                                    <input type="email" class="form-control"
-                                        name="email" id="" placeholder="Enter Your Email Address"> 
-                                    </div>
+                                    <input type="email" class="form-control" name="email" id=""
+                                        placeholder="Enter Your Email Address">
+                                </div>
                                 <div class="form-group col-md-12">
-                                     <input type="text" class="form-control" name="phone"
-                                        id="" placeholder="Contact Number "> </div>
+                                    <select class="form-control" name="" id="">
+                                        <option value="" disabled selected>Category</option>
+                                        <option value="band">Band</option>
+                                        <option value="dj">Dj</option>
+                                        <option value="dance/troup">Dance/Troup</option>
+                                        <option value="magician">Magician</option>
+                                        <option value="photo/videography">Photo/Videography</option>
+                                    </select>
+                                </div>
+                               
+                                <div class="form-group col-md-12">
+                                    <input type="password" class="form-control" name="phone" id="" placeholder="password">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input type="password" class="form-control" name="phone" id="" placeholder="Conform Password">
+                                </div>
                             </div>
 
 
@@ -141,7 +154,7 @@
             email: {
                 required: true,
                 email: true,
-                
+
 
             },
             phone: {
@@ -153,20 +166,20 @@
         // messages: {
         //     fname: {
         //         required: "this field is required",
-                
+
         //     },
         //     lname: {
         //         required: "this field is required",
-                
+
         //     },
         //     email : {
         //         required:"this field is required",
         //         email:"formate wrong"
-                
+
         //     },
         //     phone:{
         //         required:"this field is required",
-                
+
         //     }
         // },
         SubmitHandler: function (myform) {

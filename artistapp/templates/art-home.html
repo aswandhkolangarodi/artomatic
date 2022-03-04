@@ -5,7 +5,7 @@
 
 
 
-<div class="home-section pt-5">
+<!-- <div class="home-section pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-2"></div>
@@ -22,7 +22,7 @@
            </div>
            <div class="col-lg-2"></div>
         </div>
-
+        
     </div>
     
 </div>
@@ -47,9 +47,146 @@
               </div>
         </div> 
     </div>  
+</section> -->
+
+<style>
+    .profile-update {
+        border: none;
+        padding-top: 40px;
+    }
+
+    @media(max-width:991px) {
+        .profile-update {
+            padding-top: 0;
+
+        }
+    }
+
+    @media(max-width:767px) {
+        .profile-update {
+            padding-top: 0;
+            padding-bottom: 30px;
+        }
+    }
+</style>
+
+<section class="art-dash  my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-12 col-md-6 ">
+                <div class="card my-4 mx-auto shadow " style="width: 22rem; ">
+                    <div class="card-body">
+                        <div class="d-inline-block">
+                            <div class="icon">
+                                <h1 class="text-success display-1 p-2"><i class="fa-solid fa-user-lock"></i></h1>
+                            </div>
+                        </div>
+                        <div class="d-inline-block">
+                            <h4 class="ml-4"><span>*** </span>times </h4> <br>
+                            <p class="ml-4 font-weight-bold">Profile Viewed</p>
+                        </div>
+                    </div>
+                    <a href="/artist/artist-status" class=" stretched-link"></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 col-md-6">
+                <div class="card my-4 mx-auto shadow " style="width: 22rem; ">
+                    <div class="card-body">
+                        <div class="d-inline-block">
+                            <div class="icon">
+                                <h1 class="text-info display-1 p-2"><i class="fa-solid fa-user-lock"></i></h1>
+                            </div>
+                        </div>
+                        <div class="d-inline-block">
+                            <h4 class="ml-4"><span>*** </span>mins </h4> <br>
+                            <p class="ml-4 font-weight-bold">spend on profile </p>
+                        </div>
+                    </div>
+                    <a href="/artist/artist-status" class=" stretched-link"></a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 col-md-6">
+                <div class="card my-4 mx-auto shadow " style="width: 22rem; ">
+                    <div class="card-body">
+                        <div class="d-inline-block">
+                            <div class="icon">
+                                <h1 class="text-warning display-1 p-2"><i class="fa-solid fa-user-lock"></i></h1>
+                            </div>
+                        </div>
+                        <div class="d-inline-block">
+                            <h4 class="ml-4"><span>*** %</span>Users </h4> <br>
+                            <p class="ml-4 font-weight-bold">showed Intrest</p>
+                        </div>
+                    </div>
+                    <a href="/artist/artist-status" class=" stretched-link"></a>
+                </div>
+            </div>
+
+
+            <div class="col-lg-6 col-12">
+                <div class="card   profile-update">
+                    
+                    <div class="mt-5 text-center">
+                        <p class="lead ">Your Profile is under Review.
+                            Add details and complete your profile to get live on Artomatic.</p>
+
+                        <a href="/artist/artist-profile"  class="btn btn-outline-danger stretched-link">Complete Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="card p-3 ">
+                    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                   <a href="/artist/artist-subscription" class="text-decoration-none"> <h5 class="text-center p-2">Get Subscription to show your profit chart</h5></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
 
+<script>
+    window.onload = function () {
+
+        var options = {
+            animationEnabled: true,
+            title: {
+                text: "Monthly Profit "
+            },
+            axisX: {
+                valueFormatString: "MMM"
+            },
+            axisY: {
+                title: "Profit",
+                prefix: "$"
+            },
+            data: [{
+                yValueFormatString: "$#,###",
+                xValueFormatString: "MMMM",
+                type: "spline",
+                dataPoints: [
+                    { x: new Date(2017, 0), y: 25060 },
+                    { x: new Date(2017, 1), y: 27980 },
+                    { x: new Date(2017, 2), y: 33800 },
+                    { x: new Date(2017, 3), y: 49400 },
+                    { x: new Date(2017, 4), y: 40260 },
+                    { x: new Date(2017, 5), y: 33900 },
+                    { x: new Date(2017, 6), y: 48000 },
+                    { x: new Date(2017, 7), y: 31500 },
+                    { x: new Date(2017, 8), y: 32300 },
+                    { x: new Date(2017, 9), y: 42000 },
+                    { x: new Date(2017, 10), y: 52160 },
+                    { x: new Date(2017, 11), y: 49400 }
+                ]
+            }]
+        };
+        $("#chartContainer").CanvasJSChart(options);
+
+    }
+</script>
 
 
 

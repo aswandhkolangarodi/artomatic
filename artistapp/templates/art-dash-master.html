@@ -14,7 +14,9 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    
   }
+  
     </style>
 
     <!-- Bootstrap CSS -->
@@ -26,6 +28,9 @@
     <link rel="stylesheet" href="{% static 'js/artist-home.js' %}">
     <link href="{% static 'js/artist-dash.js' %}"></link>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
     <title>artist</title>
   
   </head>
@@ -41,10 +46,20 @@
                     <div class="collapse navbar-collapse" id="navbarScroll">
                       <ul class="navbar-nav ml-auto my-2 my-lg-0 navbar-nav-scroll " style="max-height: 100px;">
                         <li class="nav-item mr-2 active">
-                          <a class="nav-link" href="/artist/artist-dash">Home <span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="/artist/artist-dash">Dashboard <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item mr-2">
+                        <!-- <li class="nav-item mr-2">
                           <a class="nav-link" href="/artist/artist-booking">Booking</a>
+                        </li> -->
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Booking
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                            <li><a class="dropdown-item" href="/artist/artist-booking">New Req</a></li>
+                            <li><a class="dropdown-item" href="/artist/artist-pending-work"> Pending</a></li>
+                            <li><a class="dropdown-item" href="/artist/artist-pending-canceled"> Canceled</a></li>
+                          </ul>
                         </li>
                         <li class="nav-item mr-2 ">
                           <a class="nav-link " href="/artist/event-pricing" >
@@ -52,6 +67,7 @@
                           </a>
                          
                         </li>
+                        
                         <li class="nav-item mr-2">
                           <a class="nav-link " href="/artist/artist-status">status</a>
                         </li>
@@ -61,18 +77,25 @@
                         <li class="nav-item mr-2">
                           <a class="nav-link " href="/artist/artist-billing">Billing Details</a>
                         </li>
-                        <li class="nav-item mr-2">
+                        <!-- <li class="nav-item mr-2">
                           <a class="nav-link " href="/artist/artist-contact">Contact</a>
-                        </li>
-                        <li class="nav-item mr-2">
+                        </li> -->
+                        <!-- <li class="nav-item mr-2">
                           <a class="nav-link " href="/artist/artist-subscription">Membership</a>
+                        </li> -->
+                        <li class="nav-item mr-2 ">
+                          <a class="nav-link " href="/artist/artist-payment" >
+                            Payment
+                          </a>
+                         
                         </li>
                       </ul>
                       <ul class="navbar-nav ml-auto my-2 my-lg-0 " style="max-height: 100px;">
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false"><span class="text-dark ">aswandh</span><img src="{% static 'img/category/band3.jpg' %}" alt="Avatar" class="ml-3 avatar"></a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Gallery</a>
+                            <a class="dropdown-item" href="/artist/artist-profile">Profile</a>
+                            <a class="dropdown-item" href="/artist/artist-profile#v-pills-profile">Gallery</a>
                             <a class="dropdown-item" href="#">Video</a>
                             <a class="dropdown-item" href="#">Bio</a>
                             <a class="dropdown-item" href="#">Key-info</a>
@@ -100,7 +123,11 @@
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- chart cdn -->
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+   <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

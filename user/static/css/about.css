@@ -1,17 +1,11 @@
 
 
 .container {
-    background: #fff;
-    padding: 20px 20px 20px 20px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    width: 945px;
-    border: 1px solid;
+    
     
 }
 
 iframe {
-    padding: 50px;
     width: 85%;
     height: 80%;
     /* margin-top: 80px; */
@@ -19,7 +13,7 @@ iframe {
     
 }
 
-.text-muted {
+.contact-text {
     font-size: 13px;
     font-weight: bold
 }

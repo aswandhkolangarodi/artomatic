@@ -207,11 +207,11 @@ label {
     border-radius: 2px
 }
 
-#inner-box::-webkit-scrollbar-thumb,
+/* #inner-box::-webkit-scrollbar-thumb,
 #inner-box2::-webkit-scrollbar-thumb {
     background-color: #333;
     border-radius: 2px
-}
+} */
 
 #price {
     height: 45px
@@ -364,7 +364,7 @@ label {
     margin-top: 25px
 }
 
-.slider {
+/* .slider {
     position: relative;
     z-index: 1;
     height: 5px;
@@ -432,7 +432,7 @@ label {
 
 .slider>.thumb.active {
     box-shadow: 0 0 0 10px rgba(63, 204, 75, 0.623)
-}
+} */
 
 input[type=range] {
     position: absolute;

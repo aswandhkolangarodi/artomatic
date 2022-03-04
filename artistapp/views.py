@@ -18,3 +18,11 @@ def fnbilling(req):
     return render(req,'art-billing.html')
 def fnp_details(req):
     return render(req,'art-performence-details.html')
+def fnprofile(req):
+    return render(req,'art-profile-u.html')
+def fnpendingwork(req):
+    return render(req,'art-booking-pending.html')
+def fncanceled(req):
+    return render(req,'art-booking-can.html')
+def fnartpayment(req):
+    return render(req,'art-payment.html')

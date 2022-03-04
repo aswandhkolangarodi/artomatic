@@ -1,0 +1,93 @@
+
+
+
+
+{% extends 'art-dash-master.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/booking.css' %}">
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card p-3 my-5  ">
+                <div class="card-header">
+                    <h4>Canceled Programes</h4>
+                </div>
+                <div class="table-responsive table-hover mx-auto">
+                    <table class="table ">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>phone</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                                <th>Venue</th>
+                                <th>Requirements</th>
+
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Samso Park</td>
+                                <td>abc@gmail.com</td>
+                                <td>1243528299</td>
+                                <td>campus</td>
+                                <td>25-02-2022</td>
+                                <td>Vallikunnu</td>
+                                <td><button>view</button></td>
+
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Marlo Sanki</td>
+                                <td>abc@gmail.com</td>
+                                <td>1543528299</td>
+                                <td>campus</td>
+                                <td>25-02-2022</td>
+                                <td>tanur</td>
+                                <td><button>view</button></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>John ryte</td>
+                                <td>abc@gmail.com</td>
+                                <td>1443528299</td>
+                                <td>campus</td>
+                                <td>25-02-2022</td>
+                                <td>manjer</td>
+                                <td><button>view</button></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Peter mark</td>
+                                <td>abc@gmail.com</td>
+                                <td>4352829932</td>
+                                <td>campus</td>
+                                <td>25-02-2022</td>
+                                <td>parappangadi</td>
+                                <td><button>view</button></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Dave</td>
+                                <td>abc@gmail.com</td>
+                                <td>4352829932</td>
+                                <td>campus</td>
+                                <td>25-02-2022</td>
+                                <td>kondoty</td>
+                                <td><button>view</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
